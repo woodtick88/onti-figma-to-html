@@ -1,0 +1,2647 @@
+@import "fonts"
+@import "libs"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+	box-sizing: border-box
+
+*, *::before, *::after 
+	box-sizing: inherit
+
+body
+	margin: 0
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	font-family: Inter
+	font-style: normal
+	font-weight: 400
+	font-size: 13px
+	line-height: 16px
+	color: #fff
+	background-color: #0A202C
+
+a 
+	text-decoration: none 
+	color: inherit	
+	display: inline-block
+
+a:hover	
+	text-decoration: none 
+
+ul, ol, li 
+	margin: 0
+	padding: 0
+	list-style: none		
+
+h1, h2, h3, h4, h5, h6 
+	margin: 0
+
+p 
+	margin: 0
+
+.container	
+	max-width: 1152px
+	padding: 0 48px
+	margin: 0 auto
+	box-sizing: content-box 
+	position: relative
+	outline: 1px solid red
+
+
+
+// header 
+
+.header-wrapper
+	border-bottom: 1px solid #102E3F	
+
+.main-header
+	display: flex 
+	justify-content: space-between	
+	align-items: center
+	min-height: 88px
+	position: relative
+
+	.header-logo
+
+		.header-logo-link
+			display: inline-block
+			background: url(../img/header-logo.svg) center no-repeat
+			background-size: cover
+			height: 40px
+			width: 159px
+
+	.header-nav
+
+		.header-nav-list
+			display: flex 
+			justify-content: space-between
+
+			.header-nav-link 
+				position: relative
+				margin-left: 12px
+				margin-right: 12px
+
+				a 
+					display: inline-block
+					font-size: 14px
+					line-height: 20px
+					color: #fff					
+					transition: 0.6s
+					cursor: pointer
+
+				.action-button	
+					display: inline-block
+					font-size: 14px
+					line-height: 20px
+					color: #fff
+					transition: 0.6s
+					cursor: pointer
+
+				.header-inner-nav	
+					position: absolute
+					top: 29px
+					left: 0
+					width: 224px
+					box-sizing: border-box
+					background: #102E3F
+					box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.08)
+					border-radius: 8px
+					padding: 16px
+					z-index: 2
+					display: none
+
+					.header-inner-nav-link
+						margin-bottom: 16px
+
+					.header-inner-nav-link:last-child
+						margin-bottom: 0
+
+					.header-inner-nav-link:hover
+
+						a	
+							color: #00B8EC	
+
+			.header-nav-link.active-menu
+				
+				.action-button
+					color: #00B8EC 
+
+			.header-nav-link:before 
+				content: ""
+				display: none 
+				position: absolute
+				width: 100% 
+				height: 2px 
+				background-color: #00B8EC
+				left: 0 
+				bottom: -34px	
+
+			.header-nav-link:hover:before 
+				display: block
+
+			.header-nav-link:hover
+
+				.link
+					color: #00B8EC 	
+
+				.action-button	
+					color: #00B8EC 			
+
+		.header-nav-mobile
+			display: none
+			border-left: 1px solid #102E3F
+
+			.hamburger-icon-container 
+				position: relative
+				cursor: pointer
+				width: 24px
+				height: 24px				
+
+			.hamburger-icon-container.hamburger-active
+				top: 2px	
+			
+			.hamburger-icon 
+				transform: translateY(-50%)
+			
+			.hamburger-icon,
+			.hamburger-icon:before,
+			.hamburger-icon:after 
+				content: ''
+				position: absolute
+				height: 3px
+				width: 100%
+				background: #fff
+				transition: all .2s ease
+
+			.hamburger-icon:after 
+				width: 50%				
+			
+			.hamburger-icon 
+				top: 50%
+			
+
+			.hamburger-icon:before 
+				top: -200%
+			
+			.hamburger-icon:after 
+				top: 200%			
+
+			.hamburger-active .hamburger-icon 
+				transform: rotate(45deg) translate(-3px,-3px)			
+
+			.hamburger-active .hamburger-icon:before,
+			.hamburger-active .hamburger-icon:after 
+				top: 0
+			
+			.hamburger-active .hamburger-icon:before 
+				transform: rotate(90deg)
+
+
+			.overlay-mobile-menu
+				display: none
+
+			.mobile-menu-wrapper
+				position: absolute 
+				top: 89px 
+				right: 0
+				z-index: 10
+				min-height: calc(100vh - 88px)
+				width: 100%
+				background-color: rgba(4, 18, 26, 0.7)
+				display: flex
+				justify-content: flex-end
+				padding-bottom: 100px				
+
+				.mobile-menu
+					background-color: #0A202C
+					padding: 40px
+					box-sizing: border-box
+					width: 384px
+					z-index: 5					
+					display: flex 
+					justify-content: space-between
+					flex-direction: column				
+
+					.mobile-menu-list
+						flex-grow: 1
+						padding-bottom: 216px
+						position: relative
+
+						.mobile-menu-item 
+							display: block
+							margin-bottom: 32px
+							color: #00B8EC
+
+							a
+								font-family: Blogger Sans
+								font-style: normal
+								font-weight: 500
+								font-size: 32px
+								line-height: 32px
+								letter-spacing: 0.02em
+								text-transform: uppercase
+
+							.name	
+								font-family: Blogger Sans
+								font-style: normal
+								font-weight: 500
+								font-size: 32px
+								line-height: 32px
+								letter-spacing: 0.02em
+								text-transform: uppercase
+								cursor: pointer
+
+						.mobile-menu-item:last-child 
+							margin-bottom: 0
+
+						.mobile-menu-item.mobile-menu-inner-nav	
+							color: #fff
+
+							.inner-nav
+								display: none
+								background-color: #0A202C
+								z-index: 5
+								position: absolute
+								top: 0
+								left: 0
+
+								.inner-nav-item
+									display: block
+									margin-bottom: 16px
+
+									.inner-nav-item-link
+										font-family: Inter
+										font-style: normal
+										font-weight: 400
+										font-size: 17px
+										line-height: 24px
+										color: #00B8EC
+
+									.back
+										display: block 
+										position: relative
+										font-family: Blogger Sans
+										font-style: normal
+										font-weight: 500
+										font-size: 14px
+										line-height: 16px
+										letter-spacing: 0.02em
+										text-transform: uppercase
+										color: #FFFFFF
+										padding-left: 32px
+										padding-bottom: 16px
+
+									.back:before 
+										content: ""
+										display: block 
+										position: absolute										
+										width: 16px
+										height: 14px
+										background: url(../img/mobile-inner-nav-icon.svg) center no-repeat
+										left: 0	
+										top: 1px
+
+
+
+					.information-links 
+
+						.connection-link
+							display: block
+							font-family: Blogger Sans
+							font-style: normal
+							font-weight: 500
+							font-size: 20px
+							line-height: 24px
+							letter-spacing: 0.02em
+							text-transform: uppercase
+							color: #00B8EC
+							margin-bottom: 32px
+
+							.about
+								display: block
+								font-family: Inter
+								font-style: normal
+								font-weight: 400
+								font-size: 13px
+								line-height: 16px
+								color: #FFFFFF
+
+						.mobile-menu-social-links	
+							display: flex 
+							justify-content: flex-start	
+							padding-top: 8px					
+
+							.link	
+								margin-right: 8px
+
+						.mobile-menu-bottom-links
+							margin-top: 40px
+
+							.link 
+								display: block
+								margin-bottom: 16px
+
+								a 
+									font-family: Inter
+									font-style: normal
+									font-weight: 400
+									font-size: 13px
+									line-height: 16px
+									color: #2F586F	
+
+							.link:last-child 
+								margin-bottom: 0			
+				
+					.registration
+						font-weight: 600
+						font-size: 13px
+						line-height: 16px
+						background: #00B8EC
+						border-radius: 24px
+						width: 192px
+						min-height: 40px	
+						display: none 
+						align-items: center
+						justify-content: center	
+						cursor: pointer
+
+	.user-interface
+		display: flex
+		justify-content: flex-end
+		align-items: center
+
+		.registration
+			font-weight: 600
+			font-size: 13px
+			line-height: 16px
+			background: #00B8EC
+			border-radius: 24px
+			width: 192px
+			min-height: 40px	
+			display: flex 
+			align-items: center
+			justify-content: center	
+			cursor: pointer
+			transition: 0.6s
+
+		.registration:hover 
+			background: #245AA9	
+
+		.search
+			display: inline-block
+			margin-left: 73px
+			cursor: pointer	
+			position: relative
+			transition: 0.6s
+
+		.search:hover 
+			transform: scale(1.1)	
+
+
+// footer 	
+
+.footer-wrapper	
+	border-top: 1px solid #102E3F	
+
+.main-footer
+	padding-top: 64px
+	padding-bottom: 72px
+
+	.footer-info-list
+		display: flex 
+		justify-content: space-between
+
+		.footer-logo
+
+			.footer-logo-link
+				display: inline-block 
+				position: relative	
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 13px
+				line-height: 16px
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				color: #FFFFFF
+				padding-left: 64px		
+				max-width: 170px	
+				transition: 0.6s	
+
+			.footer-logo-link:before 
+				content: ""
+				display: block 
+				background: url(../img/footer-logo.svg) center no-repeat 
+				background-size: cover
+				position: absolute
+				width: 40px
+				height: 40px
+				left: 0
+				top: 3px
+
+			.footer-logo-link:hover	
+				color: #245AA9	
+
+		.information
+
+			.top-link	
+				display: block
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 20px
+				line-height: 24px
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				color: #00B8EC
+				transition: 0.6s
+
+				.about
+					display: block
+					font-family: Inter
+					font-style: normal
+					font-weight: 400
+					font-size: 13px
+					line-height: 16px
+					color: #FFFFFF
+					max-width: 160px
+					text-decoration: none
+					letter-spacing: 0
+					text-transform: none
+
+			.top-link:hover 
+				color: #245AA9		
+
+		.social-links
+
+			.social-links-list
+				display: flex 
+				justify-content: flex-start	
+
+				.link	
+					margin-right: 8px					
+
+					a 
+						img
+							display: inline-block
+							position: relative
+							transition: 0.6s
+
+				.link:last-child 
+					margin-right: 0	
+
+				.link:hover
+
+					a 
+
+						img
+							transform: scale(1.15)	
+
+	.footer-bottom-links
+		position: relative
+		display: flex
+		justify-content: center
+		margin-top: 64px
+
+		.data-link
+			font-family: Inter
+			font-style: normal
+			font-weight: 400
+			font-size: 13px
+			line-height: 16px
+			color: #2F586F
+			position: absolute
+			left: 0
+			transition: 0.6s
+
+		.data-link:hover 
+			color: #00B8EC	
+
+		.information-links
+
+			a
+				display: inline-block
+				font-family: Inter
+				font-style: normal
+				font-weight: 400
+				font-size: 13px
+				line-height: 16px
+				color: #2F586F
+				margin-right: 24px
+				transition: 0.6s
+
+			a:hover 
+				color: #00B8EC
+
+
+	
+
+// breadcrumbs	
+
+.breadcrumbs
+	padding-top: 32px
+
+	.breadcrumbs-link
+		font-family: Inter
+		font-style: normal
+		font-weight: 400
+		font-size: 12px
+		line-height: 16px
+		color: #2F586F
+		position: relative
+		display: inline-block
+		padding-right: 32px
+
+	.breadcrumbs-link:before 
+		content: ""
+		display: block 
+		position: absolute
+		width: 32px
+		height: 16px
+		background: url(../img/breadcrumbs-link-icon.svg) center no-repeat
+		background-size: auto	
+		right: 0
+
+	.current
+		font-family: Inter
+		font-style: normal
+		font-weight: 400
+		font-size: 12px
+		line-height: 16px
+		color: #FFFFFF
+
+	
+// materials
+
+.materials-wrapper
+	position: relative
+
+.materials
+	padding-top: 80px
+
+	.title
+		font-family: Blogger Sans
+		font-style: normal
+		font-weight: 500
+		font-size: 64px
+		line-height: 64px
+		letter-spacing: -0.01em
+		text-transform: uppercase	
+
+	.options
+		padding-top: 64px
+		padding-bottom: 64px
+		display: flex 
+		justify-content: flex-start
+
+		.options-select
+			margin-right: 32px
+
+			.options-select-title
+				font-family: Inter
+				font-style: normal
+				font-weight: 400
+				font-size: 13px
+				line-height: 16px
+				color: #688592	
+				display: inline-block
+				margin-bottom: 8px
+				cursor: pointer
+
+			.selectric-wrapper	
+
+				.selectric				
+					background: transparent
+					border: 1px solid #2F586F
+					border-radius: 4px
+					box-sizing: border-box
+					width: 256px
+					padding-top: 12px
+					padding-bottom: 12px
+					padding-left: 16px
+					padding-right: 48px
+
+
+					.label
+						font-family: Inter
+						font-style: normal
+						font-weight: 400
+						font-size: 17px
+						line-height: 24px
+						color: #FFFFFF
+						display: flex
+						align-items: center
+						height: auto		
+						margin-left: 0
+						margin-right: 0				
+
+					.button
+						display: block
+						position: absolute
+						right: 16px
+						top: 16px
+						width: 16px
+						height: 16px
+						line-height: 0
+						background: url(../img/select-icon.svg)	center no-repeat
+						background-size: cover
+						transition: 0.3s
+
+					.button:after 
+						display: none	
+
+			.selectric-open
+
+				.selectric	
+
+					.button
+						transform: rotate(180deg)
+
+		.options-select.tablet 
+			display: none
+
+	.materials-table
+		width: 100%
+		border-collapse: collapse
+		margin-bottom: 128px
+		position: relative
+
+		.titles-row
+			font-family: Inter
+			font-style: normal
+			font-weight: 600;
+			font-size: 14px
+			line-height: 20px
+			color: #2F586F
+			text-align: left
+			border-bottom: 1px solid #FFFFFF
+			box-sizing: border-box 		
+
+			th 
+				width: 16.6%
+				box-sizing: border-box
+				padding-bottom: 14px
+				vertical-align: top
+
+			th:first-child 
+				padding-left: 24px
+				width: 19%	
+
+			th:last-child 
+				padding-right: 24px	
+				width: 14.6%
+
+			.table-sort
+				font-family: Inter
+				font-style: normal
+				font-weight: 600
+				font-size: 14px
+				line-height: 20px
+				color: #00B8EC
+				cursor: pointer
+				position: relative
+				padding-right: 32px
+				box-sizing: border-box
+
+			.table-sort:before 
+				content: ""
+				display: block
+				position: absolute
+				right: 32px
+				top: 8px
+				width: 8px
+				height: 4px
+				line-height: 0
+				background: url(../img/table-select-icon.svg) center no-repeat
+				background-size: cover
+				transition: 0.3s
+
+			.table-sort.table-sort-active:before 
+				transform: rotate(180deg)		
+				
+
+		.data-row
+			font-family: Inter
+			font-style: normal
+			font-weight: 400
+			font-size: 14px
+			line-height: 20px
+			color: #FFFFFF
+			border-bottom: 1px solid #102E3F
+			cursor: pointer
+
+			td 
+				box-sizing: border-box
+				vertical-align: top
+				padding-right: 24px
+				padding-top: 24px
+				padding-bottom: 24px	
+
+				.table-title-mobile
+					font-family: Inter
+					font-style: normal
+					font-weight: 600
+					font-size: 14px
+					line-height: 20px
+					color: #2F586F					
+					margin-bottom: 4px
+					display: none			
+
+			td:first-child 
+				padding-left: 24px	
+
+			td:lsdt-child 
+				padding-right: 48px	
+
+			.data-row-link 
+
+				a
+					font-family: Inter
+					font-style: normal
+					font-weight: 400
+					font-size: 14px
+					line-height: 20px
+					color: #00B8EC						
+
+		.data-row:hover 
+			background-color: #0F2430
+
+
+	.materials-table:after 
+		content: ""
+		display: block
+		position: absolute
+		left: 0
+		bottom: 1px
+		width: 100%
+		height: 1px
+		background: #FFFFFF
+		z-index: 2
+
+	.materials-table:before 
+		content: ""
+		display: none
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 1px
+		background: #FFFFFF
+		z-index: 2	
+
+			
+
+	.materials-background-images
+
+		.materials-background-image
+			display: inline-block 
+			position: absolute
+
+		.materials-background-image-1			
+			right: 256px
+			top: 23px
+
+		.materials-background-image-2			
+			right: 22px
+			top: 102px	
+
+		.materials-background-image-3			
+			left: -53px
+			top: 50%	
+			transform: translateY(-50%)
+
+		.materials-background-image-4			
+			left: -36px
+			bottom: 100px	
+
+.materials-wrapper-background-images
+
+	.materials-wrapper-background-image	
+		display: inline-block 
+		position: absolute
+
+	.materials-wrapper-background-image-1			
+		right: 0
+		top: 60%	
+		transform: translateY(-50%)
+
+
+
+// search-panel
+
+.search-panel-wrapper-overlay	
+	position: absolute
+	min-height: 100%
+	width: 100%
+	top: 0 
+	left: 0	
+	background-color: rgba(4, 18, 26, 0.7)
+	z-index: 30
+	display: none
+
+	.search-panel-wrapper		
+		background-color: #0A202C
+		border-bottom: 1px solid #102E3F
+
+		.search-panel
+			box-sizing: border-box
+			min-height: 88px
+			display: flex 
+			align-items: center
+			justify-content: space-between
+
+			.search-input
+				display: flex 
+				align-items: center
+				margin-right: 20px
+				flex-grow: 1
+
+				.search-input-icon
+					display: inline-block 
+					margin-right: 16px
+					cursor: pointer
+					position: relative
+					transition: 0.6s
+
+				.search-input-icon:hover 
+					transform: scale(1.1)	
+
+				input[type="search"] 
+					font-family: Inter
+					font-style: normal
+					font-weight: 400
+					font-size: 17px
+					line-height: 24px
+					color: #fff
+					border: none
+					outline: none
+					background-color: transparent
+					flex-grow: 1
+
+				input[type="search"]::focus 
+					border: none	
+					outline: none
+
+				input[type="search"]::placeholder	
+					color: #2F586F
+
+			.search-button
+				font-family: Inter
+				font-style: normal
+				font-weight: 600
+				font-size: 13px
+				line-height: 16px
+				display: flex
+				align-items: center
+				justify-content: center
+				color: #FFFFFF
+				padding: 12px 16px
+				background: #00B8EC
+				border-radius: 24px
+				cursor: pointer
+				border: none
+				min-width: 96px	
+				box-sizing: border-box	
+				transition: 0.6s			
+
+			.search-button:focus 
+				border: none
+				outline: none	
+
+			.search-button:hover 
+				background: #245aa9	
+
+			.search-panel-close
+				display: inline-block	
+				width: 24px
+				height: 24px
+				background: url(../img/search-close-icon.svg) center no-repeat
+				cursor: pointer 
+				position: relative
+				transition: 0.6s
+				margin-left: 32px
+
+			.search-panel-close:hover 
+				transform: scale(1.1)	
+
+
+// search-section
+
+.search-wrapper
+	padding-top: 64px
+	position: relative
+	overflow: hidden
+
+	.search
+		box-sizing: border-box 
+		margin: 0 auto
+		max-width: 864px 
+		padding-left: 48px
+		padding-right: 48px
+		position: relative
+
+		.search-input
+			position: relative
+			display: block
+
+			input[type="search"] 
+				font-family: Inter
+				font-style: normal
+				font-weight: 400
+				font-size: 24px
+				line-height: 32px
+				color: #fff
+				border: none
+				outline: none
+				background-color: transparent
+				width: 100%
+				box-sizing: border-box
+				padding-left: 32px
+				padding-right: 104px
+				padding-top: 24px
+				padding-bottom: 24px
+				border: 1px solid #2F586F
+				border-radius: 80px
+
+			input[type="search"]::focus 
+				border: none	
+				outline: none
+
+			input[type="search"]::placeholder	
+				color: #2F586F	
+
+			.search-icon
+				display: flex
+				width: 64px
+				height: 64px
+				background: #102E3F
+				border-radius: 50%
+				justify-content: center 
+				align-items: center
+				position: absolute
+				right: 8px 
+				top: 8px	
+				cursor: pointer
+				outline: none 
+				border: none
+
+				img 
+					display: inline-block 
+					position: relative
+					transition: 0.6s
+
+			.search-icon:hover 		
+
+				img
+					transform: scale(1.1)	
+
+		.search-title
+			font-family: Blogger Sans
+			font-style: normal
+			font-weight: 500
+			font-size: 32px
+			line-height: 32px
+			letter-spacing: 0.02em
+			text-transform: uppercase
+			margin-top: 64px
+			margin-bottom: 64px
+
+			.result 
+				color: #00b9ecb4
+
+		.search-results	
+			counter-reset: cupcake			
+
+			.search-results-item 
+				padding-left: 96px	
+				padding-bottom: 32px	
+				padding-top: 32px				
+				border-bottom: 1px solid #102E3F	
+				counter-increment: cupcake	
+				position: relative			
+
+				.content-link
+					display: block
+					font-family: Inter
+					font-style: normal
+					font-weight: 400
+					font-size: 17px
+					line-height: 24px
+					color: #FFFFFF	
+					transition: 0.6s					
+
+					.allotted
+						color: #00B8EC
+
+				.breadcrumb-links
+					padding-top: 16px
+
+					.link
+						font-family: Inter
+						font-style: normal
+						font-weight: 400
+						font-size: 12px
+						line-height: 16px
+						color: #2f586f
+						position: relative
+						display: inline-block
+						padding-right: 32px	
+						transition: 0.6s
+
+					.link:before 
+						content: ""
+						display: block
+						position: absolute
+						width: 32px
+						height: 16px
+						background: url(../img/breadcrumbs-link-icon.svg) center no-repeat
+						background-size: auto
+						right: 0
+						transition: 0.6s
+
+					.link:last-child:before
+						display: none 
+
+			.search-results-item:before
+				content: counters(cupcake, '.') "."
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 20px
+				line-height: 24px
+				letter-spacing: 0.02em
+				text-transform: uppercase	
+				transition: 0.6s
+				display: inline-block
+				position: absolute
+				left: 0
+				top: 30px
+
+			.search-results-item:first-child	
+				border-top: 1px solid #102E3F			
+
+			.search-results-item:hover 
+
+				.content-link
+					color: #00B8EC
+
+				.breadcrumb-links					
+
+					.link
+						color: #fff	
+
+					.link:before 
+						background: url(../img/search/breadcrumbs-link-icon-hover.svg) center no-repeat	
+
+	
+			.search-results-item:hover:before
+					color: #00B8EC
+
+		.search-pagination
+			padding-top: 48px
+			padding-bottom: 128px
+			display: flex
+			justify-content: space-between
+
+			.page-links
+				display: flex
+
+				.page-links-item
+					margin-right: 8px					
+
+					a 
+						display: flex
+						width: 64px
+						height: 64px
+						background: #102E3F
+						border-radius: 50%
+						justify-content: center 
+						align-items: center
+						font-family: Inter
+						font-style: normal
+						font-weight: 400
+						font-size: 14px
+						line-height: 20px
+						color: #FFFFFF
+
+				.page-links-item.more
+
+					a
+						width: 64px
+						height: 64px
+						display: flex
+						justify-content: center 
+						align-items: center
+						font-family: Inter
+						font-style: normal
+						font-weight: normal
+						font-size: 14px
+						line-height: 20px
+						color: #688592
+						background: transparent
+
+				.page-links-item.current
+
+					a
+						background: #00B8EC	
+
+			.next
+				display: inline-block
+				background: #102E3F
+				border-radius: 80px
+				position: relative
+				font-family: Inter
+				font-style: normal
+				font-weight: 400
+				font-size: 14px
+				line-height: 20px	
+				color: #fff 
+				border: none 
+				outline: none
+				padding-top: 22px
+				padding-bottom: 22px 
+				padding-left: 24px
+				padding-right: 82px
+				cursor: pointer
+
+			.next:before 
+				content: ""
+				display: block
+				width: 24px
+				height: 16px
+				background: url(../img/search/search-next-icon.svg) center no-repeat
+				position: absolute
+				right: 24px
+				top: 24px
+
+		.search-background-images			
+
+			.search-background-image-1
+				display: inline-block
+				position: absolute
+				top: -66px 
+				right: -13px
+
+			.search-background-image-2
+				display: inline-block
+				position: absolute
+				top: 24%
+				right: -38px	
+
+	.search-wrapper-background-images	
+
+		.search-background-image-3
+			display: inline-block
+			position: absolute
+			top: 21.5%
+			left: 50px	
+
+		.search-background-image-4
+			display: inline-block
+			position: absolute
+			top: 51%
+			left: 0		
+
+		.search-background-image-5
+			display: inline-block
+			position: absolute
+			top: 178px
+			right: 0	
+
+		.search-background-image-6
+			display: inline-block
+			position: absolute
+			top: 29%
+			right: 24px			
+
+
+// text-slider-section
+
+.text-slider-wrapper
+	padding-top: 80px
+	padding-bottom: 126px
+	position: relative
+	overflow: hidden
+
+	.text-slider	
+		max-width: 768px
+		margin: 0 auto
+
+		.slide-item
+
+			.title	
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 64px
+				line-height: 64px
+				letter-spacing: -0.01em
+				text-transform: uppercase
+				margin-bottom: 16px
+
+			.data
+				font-family: Inter
+				font-style: normal
+				font-weight: 400
+				font-size: 13px
+				line-height: 16px
+				color: #00B8EC
+				margin-bottom: 32px
+
+			.content-image	
+				display: block 
+				width: 100% 
+				height: auto
+				margin-bottom: 64px
+
+			.about
+				font-family: Inter
+				font-style: normal
+				font-weight: 400
+				font-size: 17px
+				line-height: 24px
+				margin-bottom: 25px
+
+			.to-original
+				position: relative
+				display: flex 
+				flex-direction: column
+				padding-left: 72px
+				padding-top: 7px
+				padding-bottom: 7px
+				margin-top: 62px
+
+				.to-original-title					
+					font-family: Inter
+					font-style: normal
+					font-weight: 600
+					font-size: 17px
+					line-height: 24px
+					color: #FFFFFF
+					transition: 0.6s
+
+				.to-original-subtitle
+					font-family: Inter
+					font-style: normal
+					font-weight: 400
+					font-size: 14px
+					line-height: 20px
+					color: #00B8EC
+
+			.to-original:hover	
+
+				.to-original-title	
+					color: #00B8EC
+
+			.to-original:before 
+				content: ""
+				display: block 
+				position: absolute
+				width: 56px
+				height: 56px
+				background: url(../img/text/to-original-icon.svg) center no-repeat
+				left: 0 
+				top: 0		
+
+		.slick-next, .slick-prev 
+			font-size: 0
+			line-height: 0
+			position: absolute
+			display: block			
+			padding: 0
+			cursor: pointer
+			color: transparent
+			border: none
+			outline: 0
+			background: #102E3F
+			width: 64px
+			height: 64px
+			border-radius: 50%
+			z-index: 5	
+			top: 38px	
+
+		.slick-prev 
+			left: -192px	
+
+		.slick-next
+			right: -192px		
+
+
+		.slick-next:before, .slick-prev:before 
+			content: ""
+			font-size: 0
+			line-height: 0
+			opacity: 1
+			color: #fff
+			display: block 
+			position: absolute
+			background: url(../img/text/slider-arrow-icon.svg) center no-repeat
+			width: 24px
+			height: 16px
+			left: 50% 
+			top: 50% 
+			transform: translateX(-50%) translateY(-50%)
+
+		.slick-next:before	
+			transform: translateX(-50%) translateY(-50%) rotate(180deg)
+
+	.text-slider-background
+		position: relative
+
+		.text-slider-background-images
+
+			.text-slider-background-image-1
+				display: inline-block 
+				position: absolute
+				right: 177px
+				top: -76px
+
+			.text-slider-background-image-2
+				display: inline-block 
+				position: absolute
+				right: 154px
+				top: 43.3%	
+
+	.text-slider-wrapper-background-images	
+
+		.text-slider-background-image-3
+			display: inline-block
+			position: absolute
+			top: 24.8%
+			left: 50px	
+
+		.text-slider-background-image-4
+			display: inline-block
+			position: absolute
+			top: 57.1%
+			left: 0	
+
+		.text-slider-background-image-5
+			display: inline-block
+			position: absolute
+			top: 13.2%
+			right: 0
+
+		.text-slider-background-image-6
+			display: inline-block
+			position: absolute
+			top: 32.3%
+			right: 24px				
+
+
+
+// area section		
+
+.materials-wrapper.area-wrapper
+
+	.materials.area		
+
+		.options
+
+			.search-input
+				display: flex
+				align-items: flex-end
+				position: relative
+				flex-grow: 1
+
+				input[type="search"]
+					display: inline-block
+					border: 1px solid #2f586f
+					border-radius: 4px
+					box-sizing: border-box
+					width: 100%
+					padding-top: 12px
+					padding-bottom: 12px
+					padding-left: 16px
+					padding-right: 48px
+					outline: none
+					font-family: Inter
+					font-style: normal
+					font-weight: 400
+					font-size: 17px
+					line-height: 24px
+					color: #fff
+					background: transparent					
+
+				input[type="search"]:focus 
+					outline: none	
+
+				input[type="search"]:placeholder	
+					color: #2F586F
+
+				.search-input-icon	
+					width: 22px 
+					height: 22px
+					position: absolute
+					right: 13px
+					bottom: 13px
+					cursor: pointer
+					transition: 0.6s
+
+				.search-input-icon:hover
+					transform: scale(1.1)	
+
+		.materials-table
+			margin-bottom: 92px
+
+			.titles-row
+
+				th
+					width: auto
+					box-sizing: border-box
+
+				.titles-row-name	
+					padding-left: 102px	
+					width: 26.9%
+
+				.titles-row-organizaion, .titles-row-address
+					width: 16.6%
+
+				.titles-row-contacts
+					width: 21.6%		
+
+				.titles-row-profile, .titles-row-courses
+					width: 9.1%	
+
+			.data-row	
+
+				td
+					position: relative
+
+					.mail-link
+						display: block
+						color: #00B8EC
+						transition: 0.6s
+
+					.mail-link:hover
+						color: #2F586F	
+
+					.open-list
+						display: flex
+						color: #00B8EC
+						cursor: pointer
+						width: 40px 
+						height: 40px 
+						background: transparent
+						justify-content: center 
+						align-items: center 
+						border-radius: 50%
+						transition: 0.3s
+						position: relative
+						bottom: 10px 
+						right: 15px
+
+					.open-list.active-open-list	
+						background:  #00B8EC
+						color: #fff	
+
+					.profile-list
+						position: absolute
+						top: 48px
+						left: -200px
+						z-index: 4
+						width: 216px
+						box-sizing: border-box
+						padding-top: 16px
+						padding-bottom: 16px
+						padding-left: 24px
+						padding-right: 24px
+						background: #102E3F
+						border-radius: 8px
+						display: none
+
+						.profile-list-item
+							margin-bottom: 16px
+
+							a
+								font-family: Inter
+								font-style: normal
+								font-weight: 400
+								font-size: 14px
+								line-height: 20px
+								color: #FFFFFF
+								transition: 0.6s
+
+							a:hover 
+								color: #00B8EC	
+
+						.profile-list-item:last-child
+							margin-bottom: 0	
+
+
+				.data-row-name	
+					padding-left: 102px	
+					position: relative
+
+					.data-row-name-icon
+						display: inline-block
+						width: 56px
+						height: 56px
+						position: absolute
+						left: 23px
+						top: 50% 
+						transform: translateY(-50%)
+
+		.materials-background-images
+			z-index: -1
+
+			.materials-background-image 
+				position: absolute
+				display: inline-block
+
+			.materials-background-image-1
+				top: 78px
+				right: 272px
+
+			.materials-background-image-2
+				top: 47px
+				right: 164px
+
+			.materials-background-image-3
+				left: inherit
+				top: 77%
+				right: -25px	
+
+			.materials-background-image-4
+				left: -34px
+				top: 22.4%	
+
+			.materials-background-image-5
+				right: -46px
+				top: 39.4%	
+
+			.materials-background-image-6
+				left: -40px
+				top: 78.4%				
+
+	.materials-wrapper-background-images
+		z-index: -1
+
+		.materials-wrapper-background-image
+			position: absolute
+			display: inline-block
+
+		.materials-wrapper-background-image-1
+			right: 0
+			top: 45px
+
+		.materials-wrapper-background-image-2
+			display: none
+			right: 0
+			top: 45px	
+
+.area-map
+	height: 560px
+	outline: 1px solid red
+
+	.area-map-plug
+		display: block
+		width: 100% 
+		height: 100%
+
+
+// news-section
+
+.news-wrapper
+	padding-top: 80px
+	position: relative
+	overflow: hidden
+
+	.news		
+
+		.title	
+			font-family: Blogger Sans
+			font-style: normal
+			font-weight: 500
+			font-size: 64px
+			line-height: 64px
+			letter-spacing: -0.01em
+			text-transform: uppercase
+			margin-bottom: 70px
+
+		.news-list
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+			.news-list-item
+				display: block	
+				width: calc(50% - 16px)
+				margin-bottom: 68px
+
+				.item-link
+					display: block
+					overflow: hidden	
+
+					.item-image
+						display: block 
+						width: 100% 
+						height: auto
+						position: relative
+						transition: 1s
+
+					.item-data
+						font-family: Inter
+						font-style: normal
+						font-weight: 400
+						font-size: 13px
+						line-height: 16px
+						color: #00B8EC
+						padding-top: 16px
+						padding-bottom: 16px
+
+					.item-title
+						font-family: Blogger Sans
+						font-style: normal
+						font-weight: 500
+						font-size: 20px
+						line-height: 24px
+						letter-spacing: 0.02em
+						text-transform: uppercase
+						color: #FFFFFF
+						margin-bottom: 16px
+						transition: 0.6s
+						max-width: 90%
+
+					.item-description
+						font-family: Inter
+						font-style: normal
+						font-weight: 400
+						font-size: 14px
+						line-height: 20px
+						color: #688592
+
+				.item-link:hover
+
+					.item-image
+						transform: scale(1.1)		
+
+					.item-title
+						color: #00B8EC	
+
+		.more-news-wrapper
+			display: flex 
+			justify-content: center
+			padding-bottom: 128px
+
+			.more-news
+				display: inline-block
+				box-sizing: border-box
+				position: relative
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 14px
+				line-height: 16px
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				color: #00B8EC
+				background: #102E3F
+				border-radius: 40px
+				padding-top: 16px
+				padding-bottom: 16px
+				padding-left: 36px
+				padding-right: 61px
+				cursor: pointer
+				transition: 0.6s
+
+			.more-news:before 
+				content: ""
+				display: block 
+				position: absolute
+				width: 14px
+				height: 14px
+				background: url(../img/news/more-news-icon.svg)	center no-repeat
+				right: 36px 
+				top: 50% 
+				transform: translateY(-50%)
+
+			.more-news:hover
+				transform: scale(1.06)	
+
+		.news-backgroound
+
+			.news-backgroound-image
+				display: inline-block 
+				position: absolute
+
+			.news-backgroound-image-1	
+				top: -80px
+				right: 35.9%
+
+			.news-backgroound-image-2	
+				top: -2px
+				right: 257px	
+
+			.news-backgroound-image-3	
+				top: 3px
+				right: 42px	
+
+			.news-backgroound-image-4	
+				top: 16.4%
+				left: -59px	
+
+			.news-backgroound-image-5	
+				top: 30.9%
+				left: -27px		
+
+			.news-backgroound-image-6	
+				top: 54.8%
+				left: -52px	
+
+			.news-backgroound-image-7	
+				top: 17.6%
+				right: -95px
+
+			.news-backgroound-image-8	
+				top: 40.3%
+				right: -78px
+
+			.news-backgroound-image-9	
+				top: 65.4%
+				right: -46px	
+
+			.news-backgroound-image-10	
+				top: 79.2%
+				right: -65px						
+
+	.news-wrapper-backgroound
+
+		.news-wrapper-backgroound-image
+			display: inline-block 
+			position: absolute
+
+		.news-wrapper-backgroound-image-11
+			right: 0 
+			top: 44px
+
+		.news-wrapper-backgroound-image-12
+			left: 0 
+			top: 35.1%
+
+		.news-wrapper-backgroound-image-13
+			left: 0 
+			top: 77.9%	
+
+		.news-wrapper-backgroound-image-14
+			right: 0 
+			top: 35.5%	
+
+		.news-wrapper-backgroound-image-15
+			right: 0 
+			top: 58.8%	
+
+
+// prfile-section
+
+.profile-wrapper
+	padding-top: 80px
+	padding-bottom: 48px
+	overflow: hidden
+	position: relative
+
+	.profile
+		position: relative
+
+		.title
+			font-family: Blogger Sans
+			font-style: normal
+			font-weight: 500
+			font-size: 64px
+			line-height: 64px
+			letter-spacing: -0.01em
+			text-transform: uppercase
+			margin-bottom: 64px
+
+		.choose-profile-wrapper
+			margin-bottom: 63px
+
+			.choose-profile
+				font-size: 0
+
+				.item
+					display: inline-block
+					margin-right: 8px
+					margin-bottom: 8px
+
+					label
+						display: inline-block
+						cursor: pointer
+
+						.input-title	
+							display: inline-block
+							box-sizing: border-box
+							font-family: Inter
+							font-style: normal
+							font-weight: 400
+							font-size: 13px
+							line-height: 16px
+							color: #FFFFFF
+							background: #102E3F
+							border-radius: 20px
+							padding: 12px 16px
+							text-align: center
+							transition: 0.3s
+
+						input[type="checkbox"]:checked + .input-title
+							background: #00B8EC		
+
+		.profile-project
+			color: #1CA89D
+			margin-bottom: 80px
+
+			.profile-project-title
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 48px
+				line-height: 48px
+				letter-spacing: 0.02em
+				text-transform: uppercase
+
+			.profile-project-description
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 20px
+				line-height: 24px
+				letter-spacing: 0.02em
+				text-transform: uppercase	
+
+			.profile-project-list
+				display: flex
+				flex-wrap: wrap
+				justify-content: flex-start
+				margin-top: 48px
+
+				.list-item					
+					display: block
+					width: 25% 
+					box-sizing: border-box 
+
+					.item-link
+						display: flex	
+						box-sizing: border-box 
+						width: 100%	
+						min-height: 232px					
+						background: #1CA89D
+						border: 1px solid #0A202C	
+						flex-direction: column 
+						justify-content: space-between	
+						padding-top: 26px
+						padding-left: 30px 
+						padding-right: 30px 
+						padding-bottom: 17px
+						transition: 0.3s		
+
+						.item-title
+							font-family: Blogger Sans
+							font-style: normal
+							font-weight: 500
+							font-size: 20px
+							line-height: 24px
+							letter-spacing: 0.02em
+							text-transform: uppercase
+							color: #FFFFFF	
+							transition: 0.6s
+
+						.item-content
+							display: flex
+							justify-content: space-between
+							align-items: flex-end
+
+							.item-content-icon-wrapper
+								display: block
+								width: 80px
+								height: 92px
+
+								.item-content-icon
+									fill: #fff
+									transition: 0.6s
+
+							.item-content-more
+								display: inline-block
+								font-family: Blogger Sans
+								font-style: normal
+								font-weight: 500
+								font-size: 14px
+								line-height: 16px
+								letter-spacing: 0.02em
+								text-transform: uppercase
+								color: transparent	
+								position: relative
+								padding-right: 32px
+								bottom: 16px
+								transition: 0.3s
+
+							.item-content-more:before
+								content: ""
+								display: block 
+								position: absolute
+								width: 16px
+								height: 16px 
+								background: url(../img/profile_1/profile-arrow-icon.svg) center no-repeat
+								right: 0 
+								top: 50%
+								transform: translateY(-50%)
+								transition: 0.6s
+
+					.item-link:hover 
+						background: transparent		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #1CA89D
+
+							.item-content-more
+								color: #fff
+
+		.profile-project.purple
+			color: #8076B6
+
+			.profile-project-list
+
+				.list-item	
+
+					.item-link
+						background: #8076B6
+
+					.item-link:hover 
+						background: transparent		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #8076B6
+
+		.profile-project.grey
+			color: #6F7C7F
+
+			.profile-project-list
+
+				.list-item	
+
+					.item-link
+						background: #6F7C7F
+
+					.item-link:hover 
+						background: transparent		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #6F7C7F							
+							
+		.profile-project.light-green
+			color: #8FC640
+
+			.profile-project-list
+
+				.list-item	
+
+					.item-link
+						background: #8FC640
+
+					.item-link:hover 
+						background: transparent		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #8FC640	
+
+		.profile-project.light-blue
+			color: #5B8CC9
+
+			.profile-project-list
+
+				.list-item	
+
+					.item-link
+						background: #5B8CC9
+
+					.item-link:hover 
+						background: transparent		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #5B8CC9
+
+		.profile-project.light-red
+			color: #E43B52
+
+			.profile-project-list
+
+				.list-item	
+
+					.item-link
+						background: #E43B52
+
+					.item-link:hover 
+						background: transparent		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #E43B52
+
+		.profile-project.cherry
+			color: #B33D97
+
+			.profile-project-list
+
+				.list-item	
+
+					.item-link
+						background: #B33D97
+
+					.item-link:hover 
+						background: transparent		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #B33D97
+
+		.profile-project.orange
+			color: #F58935
+
+			.profile-project-list
+
+				.list-item	
+
+					.item-link
+						background: #F58935
+
+					.item-link:hover 
+						background: transparent		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #F58935
+
+		.profile-project.blue
+			color: #245AA9
+
+			.profile-project-list
+
+				.list-item	
+
+					.item-link
+						background: #245AA9
+
+					.item-link:hover 
+						background: transparent		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #245AA9
+
+		.profile-project.yellow
+			color: #FDB813
+
+			.profile-project-list
+
+				.list-item	
+
+					.item-link
+						background: #FDB813
+
+					.item-link:hover 
+						background: transparent		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #FDB813
+
+		.profile-project.green
+			color: #1FB46F
+
+			.profile-project-list
+
+				.list-item	
+
+					.item-link
+						background: #1FB46F
+
+					.item-link:hover 
+						background: transparent		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #1FB46F
+
+		.profile-project.white
+			color: #FFFFFF
+
+			.profile-project-list
+
+				.list-item	
+
+					.item-link
+						background: #FFFFFF
+
+						.item-title 
+							color: #0A202C
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #0A202C
+
+							.item-content-more:before	
+								background: url(../img/profile_1/profile-arrow-icon-black.svg) center no-repeat		
+
+					.item-link:hover 						
+						background: transparent
+
+						.item-title 
+							color: #ffffff		
+
+						.item-content
+
+							.item-content-icon-wrapper
+
+								.item-content-icon
+									fill: #FFFFFF
+
+							.item-content-more:before	
+								    background: url(../img/profile_1/profile-arrow-icon.svg) center no-repeat		
+
+
+		.profile-background-images
+			z-index: -1
+
+			.profile-background-image
+				display: inline-block 
+				position: absolute
+				z-index: -1
+
+			.profile-background-image-1	
+				right: 36.1%
+				top: -76px
+
+			.profile-background-image-2	
+				right: 19.6%
+				top: -5px	
+
+			.profile-background-image-3
+				right: 2.3%
+				top: -2px	
+
+			.profile-background-image-4
+				right: -101px
+				top: 300px	
+
+			.profile-background-image-5
+				left: -95px
+				top: 263px	
+
+			.profile-background-image-6
+				right: -78px
+				top: 691px	
+
+			.profile-background-image-7
+				right: -80px
+				top: 977px
+				transform: rotate(270deg)	
+
+			.profile-background-image-8
+				right: 86px
+				top: 972px
+
+			.profile-background-image-9
+				right: 148px
+				top: 1261px
+				transform: rotate(90deg)
+			
+			.profile-background-image-10
+				left: -95px
+				top: 1557px
+				transform: rotate(90deg)	
+
+			.profile-background-image-11
+				right: 100px
+				top: 1502px		
+
+			.profile-background-image-12
+				right: -61px
+				top: 1662px		
+				transform: rotate(90deg)
+
+			.profile-background-image-13
+				right: 198px
+				top: 1832px	
+
+			.profile-background-image-14
+				right: -32px
+				top: 1808px
+
+			.profile-background-image-15
+				right: -60px
+				top: 2121px		
+
+			.profile-background-image-16
+				right: 127px
+				top: 2525px		
+
+			.profile-background-image-17
+				right: 74px
+				top: 2746px		
+				transform: rotate(90deg)
+
+			.profile-background-image-18
+				right: 125px
+				top: 3161px		
+
+			.profile-background-image-19
+				right: 367px
+				top: 3426px	
+				transform: rotate(90deg)	
+
+			.profile-background-image-20
+				right: 98px
+				top: 3486px	
+				transform: rotate(90deg)
+
+			.profile-background-image-21
+				right: 12px
+				top: 3589px	
+
+			.profile-background-image-22
+				right: 166px
+				top: 3830px		
+
+			.profile-background-image-23
+				right: 318px
+				top: 4281px	
+				transform: rotate(90deg)
+
+			.profile-background-image-24
+				right: -35px
+				top: 4324px		
+
+			.profile-background-image-25
+				right: 592px
+				top: 4837px	
+
+			.profile-background-image-26
+				right: 365px
+				top: 4694px	
+
+			.profile-background-image-27
+				right: 125px
+				top: 4768px	
+				transform: rotate(90deg)
+
+			.profile-background-image-28
+				right: 279px
+				top: 5238px	
+				transform: rotate(90deg)
+
+			.profile-background-image-29
+				right: -7px
+				top: 5267px	
+
+			.profile-background-image-30
+				left: -97px
+				top: 5672px	
+				transform: rotate(90deg)
+
+			.profile-background-image-31
+				right: -92px
+				top: 5626px	
+				transform: rotate(90deg)
+
+			.profile-background-image-32
+				right: 351px
+				top: 5932px	
+
+			.profile-background-image-33
+				right: 29px
+				top: 5783px											
+					
+
+
+	.profile-wrapper-background-images	
+		z-index: -1
+
+		.profile-wrapper-background-image
+			display: inline-block 
+			position: absolute
+			z-index: -1
+
+		.profile-wrapper-background-image-1
+			right: 0
+			top: 39px	
+
+		.profile-wrapper-background-image-2
+			right: 1px
+			top: 1377px		
+
+		.profile-wrapper-background-image-3
+			left: 0
+			top: 2381px	
+
+		.profile-wrapper-background-image-4
+			right: 16px
+			top: 2791px	
+
+		.profile-wrapper-background-image-5
+			right: 0
+			top: 3244px	
+
+		.profile-wrapper-background-image-6
+			right: 0
+			top: 3997px		
+
+		.profile-wrapper-background-image-7
+			left: 0
+			top: 4173px	
+
+		.profile-wrapper-background-image-8
+			right: 2px
+			top: 4705px							
+
+
+// information-section
+
+
+.information-wrapper-backgrounds	
+	padding-top: 80px	
+	position: relative
+
+.information-wrapper
+	display: flex
+	justify-content: flex-start
+	position: relative
+
+	.information-menu
+		outline: 1px solid purple
+		min-width: 288px
+		max-width: 288px
+		box-sizing: border-box 
+
+		.information-menu-list
+			min-width: 288px
+			max-width: 288px
+			box-sizing: border-box 
+			padding-right: 90px
+
+			.item
+				margin-bottom: 16px
+
+				.item-link
+					display: inline-block
+					font-family: Inter
+					font-style: normal
+					font-weight: normal
+					font-size: 13px
+					line-height: 16px
+					color: #FFFFFF
+					transition: 0.6s
+
+				.item-link:hover
+					color: #00B8EC	
+
+	.information
+		outline: 1px solid green
+		flex-grow: 1
+		position: relative
+
+		.title
+			font-family: Blogger Sans
+			font-style: normal
+			font-weight: 500
+			font-size: 64px
+			line-height: 64px
+			letter-spacing: -0.01em
+			text-transform: uppercase
+			margin-bottom: 64px
+
+		.information-news-wrapper
+			position: relative	
+
+		.information-news
+			display: flex 
+			justify-content: space-between 
+			align-items: center
+			margin-bottom: 64px
+
+			.information-news-title
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 48px
+				line-height: 48px
+				letter-spacing: 0.02em
+				text-transform: uppercase
+
+			.information-news-link
+				display: inline-block
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 14px
+				line-height: 16px
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				color: #00B8EC
+				position: relative
+				transition: 0.6s
+				padding-right: 32px
+
+			.information-news-link:before 
+				content: ""
+				display: block
+				position: absolute 
+				background: url(../img/information_1/information-blue-arrow.svg) center no-repeat 
+				width: 16px
+				height: 16px 
+				right: 0 
+				top: 50%
+				transform: translateY(-50%)	
+
+			.information-news-link:hover
+				transform: scale(1.06)	
+
+		.information-news-list
+			display: flex
+			flex-wrap: wrap 
+			justify-content: space-between
+			border-bottom: 1px solid #fff
+			margin-bottom: 64px
+
+			.list-item	
+				margin-bottom: 48px	
+				width: calc(33% - 20px)		
+
+				.item-link
+					display: flex
+					flex-direction: column
+
+					.item-link-image-wrapper
+						overflow: hidden
+						flex-grow: 1
+						margin-bottom: 16px
+
+						.item-link-image
+							display: block 
+							position: relative
+							width: 100% 
+							height: auto
+							transition: 0.6s
+
+					.item-link-content						
+
+						.item-link-content-data	
+							font-family: Inter
+							font-style: normal
+							font-weight: 400
+							font-size: 13px
+							line-height: 16px
+							color: #00B8EC
+							margin-bottom: 16px
+
+						.item-link-content-title
+							font-family: Blogger Sans
+							font-style: normal
+							font-weight: 500
+							font-size: 20px
+							line-height: 24px
+							letter-spacing: 0.02em
+							text-transform: uppercase
+							margin-bottom: 16px
+							color: #fff 
+							transition: 0.6s						
+
+				.item-link:hover	
+
+					.item-link-image-wrapper
+
+						.item-link-image
+							transform: scale(1.1)
+
+					.item-link-content	
+
+						.item-link-content-title
+							color: #00B8EC	
+
+			.list-item.tablet 
+				display: none				
+
+			.list-item.main-item
+				width: 100%						
+
+				.item-link
+					flex-direction: row	
+
+					.item-link-image-wrapper
+						margin-bottom: 0
+
+					.item-link-content	
+						min-width: 288px
+						max-width: 288px
+						margin-left: 32px
+
+						.item-link-content-about
+							font-family: Inter
+							font-style: normal
+							font-weight: 400
+							font-size: 14px
+							line-height: 20px
+							color: #688592
+							margin-bottom: 16px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+@import "media" // Всегда в конце
