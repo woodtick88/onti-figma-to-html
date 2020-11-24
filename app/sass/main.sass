@@ -39,6 +39,8 @@ html, body
 
 *, *::before, *::after 
 	box-sizing: inherit
+	min-width: 0
+	min-height: 0	
 
 body
 	margin: 0
@@ -2433,6 +2435,7 @@ p
 .information-wrapper-backgrounds	
 	padding-top: 80px	
 	position: relative
+	padding-bottom: 64px
 
 .information-wrapper
 	display: flex
@@ -2616,14 +2619,477 @@ p
 							color: #688592
 							margin-bottom: 16px
 
+		.information-stages-wrapper
+			border-bottom: 1px solid #FFFFFF
+			padding-bottom: 64px
+			margin-bottom: 64px
+
+			.information-stages-title
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 20px
+				line-height: 24px
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				margin-bottom: 32px
+
+			.information-stages-list	
+				margin-bottom: 48px
+
+				.list-item	
+					font-family: Blogger Sans
+					font-style: normal
+					font-weight: 500
+					font-size: 20px
+					line-height: 24px
+					letter-spacing: 0.02em
+					text-transform: uppercase
+					display: flex
+					padding-top: 24px
+					padding-bottom: 24px
+					border-bottom: 1px solid #102E3F
+
+					.list-item-title
+						color: #00B8EC
+						width: 190px
+
+					.list-item-data
+						color: #FFFFFF
+
+					.list-item-year
+						color: #2F586F
+						flex-grow: 1
+						text-align: right
+
+				.list-item:first-child
+					border-top: 1px solid #102E3F	
+
+			.information-stages-list.last	
+					margin-bottom: 32px
+
+			.information-stages-more
+				display: inline-block 
+				text-align: center
+				font-family: Inter
+				font-style: normal
+				font-weight: 600
+				font-size: 13px
+				line-height: 16px
+				color: #FFFFFF
+				min-width: 192px
+				padding-left: 16px
+				padding-right: 16px
+				padding-top: 12px
+				padding-bottom: 12px
+				box-sizing: border-box
+				background: #00B8EC
+				border-radius: 24px
+				transition: 0.6s
+
+			.information-stages-more:hover
+				background: #245aa9	
+
+		.information-content-image
+			padding-bottom: 64px
+			margin-bottom: 64px
+			border-bottom: 1px solid #fff
+
+			img 
+				display: block 
+				width: 100% 
+				height: auto
+
+		.information-news-wrapper.news-materials						
+
+			.information-news
+				margin-bottom: 56px
+
+			.information-news-list
+				flex-wrap: nowrap
+				padding-bottom: 48px
+				margin-bottom: 48px
+				border-bottom: 1px solid #102E3F
+
+				.list-item
+					width: auto
+					flex-grow: 1
+					margin-bottom: 0
+
+					.item-link-content 
+						
+						.item-link-content-title
+							font-family: Blogger Sans
+							font-style: normal
+							font-weight: 500
+							font-size: 32px
+							line-height: 32px
+							letter-spacing: 0.02em
+							text-transform: uppercase
+
+				.item-numbers	
+					min-width: 288px
+					max-width: 288px 
+					box-sizing: border-box
+					margin-left: 32px
+
+					.item-numbers-registrations
+						background: #102E3F
+						border-radius: 8px
+						padding-left: 32px
+						padding-right: 32px
+						padding-top: 32px
+						padding-bottom: 24px
+						margin-bottom: 32px
+
+						.item-numbers-registrations-amount
+							font-family: Blogger Sans
+							font-style: normal
+							font-weight: 500
+							font-size: 80px
+							line-height: 80px
+							letter-spacing: -0.01em
+							text-transform: uppercase
+							color: #00B8EC
+
+						.item-numbers-registrations-title
+							font-family: Blogger Sans
+							font-style: normal
+							font-weight: 500
+							font-size: 20px
+							line-height: 24px
+							letter-spacing: 0.02em
+							text-transform: uppercase
+							color: #FFFFFF
+
+					.item-numbers-rolls		
+						background: #102E3F
+						border-radius: 8px
+						padding-left: 32px
+						padding-right: 32px
+						padding-top: 24px
+						padding-bottom: 32px
+
+						.item-numbers-rolls-title
+							font-family: Blogger Sans
+							font-style: normal
+							font-weight: 500
+							font-size: 20px
+							line-height: 24px
+							letter-spacing: 0.02em
+							text-transform: uppercase
+							margin-bottom: 24px
+
+						.item-numbers-list
+							counter-reset: informationListCounter	
+
+							.item-numbers-item
+								font-family: Inter
+								font-style: normal
+								font-weight: 600
+								font-size: 17px
+								line-height: 24px
+								padding-bottom: 8px
+								padding-top: 8px
+								border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+								text-align: right
+								position: relative
+
+							.item-numbers-item:before 
+								counter-increment: informationListCounter
+								content:  counter(informationListCounter) " "
+								display: inline-block 
+								position: absolute
+								left: 0 
+								top: 50% 
+								transform: translateY(-50%)
+
+							.item-numbers-item:first-child	
+								border-top: 1px solid rgba(255, 255, 255, 0.1)
+
+		.information-news-wrapper.information-news-wrapper-2
+
+			.information-news
+				margin-bottom: 48px
+
+				.information-news-title
+					font-size: 32px
+					line-height: 32px
+
+			.information-news-list
+
+				.list-item
+					margin-bottom: 24px		
+
+		.information-documents
+			border-bottom: 1px solid #FFFFFF
+			padding-bottom: 16px
+			margin-bottom: 64px
+
+			.information-documents-title
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 48px
+				line-height: 48px
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				margin-bottom: 48px
+
+			.information-documents-description
+				font-family: Inter
+				font-style: normal
+				font-weight: 400
+				font-size: 17px
+				line-height: 24px
+				margin-bottom: 48px
+
+			.information-documents-list	
+				display: flex 
+				flex-wrap: wrap	
+
+				.list-item
+					width: 33.3% 
+					box-sizing: border-box
+					padding-right: 32px
+					margin-bottom: 52px
+
+					.item-link
+
+						.item-icon-wrapper
+							width: 56px
+							height: 56px
+							background: #102E3F
+							border-radius: 50%
+							display: flex 
+							justify-content: center 
+							align-items: center
+							margin-bottom: 8px
+
+						.documet-description
+							font-family: Inter
+							font-style: normal
+							font-weight: 400
+							font-size: 14px
+							line-height: 20px
+							color: #FFFFFF
+							transition: 0.6s
+
+					.item-link:hover	
+
+						.documet-description
+							color: #00B8EC	
+
+		.information-partners
+			border-bottom: 1px solid #FFFFFF
+			padding-bottom: 16px
+			margin-bottom: 64px
+
+			.information-partners-title
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 48px
+				line-height: 48px
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				margin-bottom: 48px
+
+			.information-partners-slider-wrapper	
+				position: relative
+
+				.slider-title
+					font-family: Blogger Sans
+					font-style: normal
+					font-weight: 500
+					font-size: 32px
+					line-height: 32px
+					letter-spacing: 0.02em
+					text-transform: uppercase
+					margin-bottom: 48px
+
+				.slider-info	
+					margin-bottom: 48px
+
+					.slider-info-item
+
+						.slider-info-link
+							display: flex
+							box-sizing: border-box
+							border: 1px solid #102E3F
+							height: 104px
+							justify-content: center 
+							align-items: center
+							overflow: hidden
+
+							.slider-info-icon
+								display: inline-block	
+								position: relative
+								transition: 0.6s
+
+						.slider-info-link:hover
+
+							.slider-info-icon
+								transform: scale(1.05)
+
+					.slider-info-item:focus 
+						outline: none 
+						border: none	
+
+
+					.slick-next, .slick-prev 
+						font-size: 0
+						line-height: 0
+						position: absolute
+						top: -96px
+						display: block
+						box-sizing: border-box
+						width: 64px
+						height: 64px
+						border-radius: 50%
+						transform: translate(0, 0)
+						background: #102E3F
+						z-index: 2
+						transition: 0.3s	
+
+					.slick-next
+						right: 0	
+
+					.slick-prev 
+						left: inherit
+						right: 72px	
+
+					.slick-next:before, .slick-prev:before 
+						content: ""	
+						font-family: slick
+						font-size: 0
+						line-height: 0
+						opacity: 1
+						display: block 
+						width: 24px
+						height: 15px
+						background: url(../img/information_1/slick-arrow.svg) center no-repeat
+						position: absolute
+						left: 50% 
+						top: 50% 
+						transform: translate(-50%, -50%)
+
+					.slick-next:before	
+						transform: translate(-50%, -50%) rotate(180deg)
+
+					.slick-next:hover, .slick-prev:hover 
+						background: #00B8EC	
+
+		.information-command
+			margin-bottom: 64px
+
+			.information-partners-title
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 48px
+				line-height: 48px
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				margin-bottom: 48px
+
+			.information-partners-slider-wrapper	
+				position: relative
+
+				.slider-title
+					font-family: Blogger Sans
+					font-style: normal
+					font-weight: 500
+					font-size: 32px
+					line-height: 32px
+					letter-spacing: 0.02em
+					text-transform: uppercase
+					margin-bottom: 48px
+
+				.slider-info	
+					margin-bottom: 48px
+
+					.slider-info-item
+						display: flex
+						box-sizing: border-box
+						border: 1px solid #102E3F
+						min-height: 160px
+						padding: 32px
+						justify-content: flex-start
+						align-items: flex-start
+						overflow: hidden
+
+						.slider-info-about
+							margin-left: 16px
+							padding-top: 5px
+
+							.slider-info-about-title
+								font-family: Blogger Sans
+								font-style: normal
+								font-weight: 500
+								font-size: 20px
+								line-height: 24px
+								letter-spacing: 0.02em
+								text-transform: uppercase
+
+							.slider-info-about-description
+								font-family: Inter
+								font-style: normal
+								font-weight: 400
+								font-size: 14px
+								line-height: 20px
+								color: #688592
 
 
 
 
+					.slider-info-item:focus 
+						outline: none 
+						border: none	
 
 
+					.slick-next, .slick-prev 
+						font-size: 0
+						line-height: 0
+						position: absolute
+						top: -96px
+						display: block
+						box-sizing: border-box
+						width: 64px
+						height: 64px
+						border-radius: 50%
+						transform: translate(0, 0)
+						background: #102E3F
+						z-index: 2
+						transition: 0.3s	
 
+					.slick-next
+						right: 0	
 
+					.slick-prev 
+						left: inherit
+						right: 72px	
+
+					.slick-next:before, .slick-prev:before 
+						content: ""	
+						font-family: slick
+						font-size: 0
+						line-height: 0
+						opacity: 1
+						display: block 
+						width: 24px
+						height: 15px
+						background: url(../img/information_1/slick-arrow.svg) center no-repeat
+						position: absolute
+						left: 50% 
+						top: 50% 
+						transform: translate(-50%, -50%)
+
+					.slick-next:before	
+						transform: translate(-50%, -50%) rotate(180deg)
+
+					.slick-next:hover, .slick-prev:hover 
+						background: #00B8EC	
 
 
 

@@ -135,6 +135,61 @@ $(function() {
 		});
 
 	};
+	
+
+	// information-slider
+
+
+	if ( $('.information .information-partners .slider-info').length ) {
+
+		$('.information .information-partners .slider-info').slick({
+			infinite: true,
+			dots: false,
+			slidesToShow: 4,
+			responsive: [
+				{
+				  breakpoint: 980,
+				  settings: {
+					slidesToShow: 3
+				  }
+				},
+				{
+					breakpoint: 767,
+					settings: {
+					  slidesToShow: 2,
+					  arrows: false
+					}
+				  }
+			]
+		});
+
+	};
+
+
+	if ( $('.information .information-command .slider-info').length ) {
+
+		$('.information .information-command .slider-info').slick({
+			infinite: true,
+			dots: false,
+			slidesToShow: 2,
+			responsive: [
+				{
+					breakpoint: 767,
+					settings: {
+					  slidesToShow: 1,
+					  arrows: false
+					}
+				  }
+			]
+		});
+
+	};
+
+
+
+
+
+
 
 
 	$(window).scroll(function(){
