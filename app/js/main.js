@@ -186,6 +186,19 @@ $(function() {
 	};
 
 
+	// profile_2-image-slider
+
+	if ( $('.profile-2 .profile-2-image-slider').length ) {
+
+		$('.profile-2 .profile-2-image-slider').slick({
+			infinite: true,
+			dots: true,
+			slidesToShow: 1
+		});
+
+	};
+
+
 
 
 
@@ -248,6 +261,31 @@ $(function() {
 			}
 
 		};
+
+		// profile_2-section registration button fixed
+
+		if ( $('.profile-2 .profile-video .profile-video-registration').length ) {
+
+			const scrollTop = $(this).scrollTop();
+			const offsetProfileVideo = $('.profile-2 .profile-video').offset().top;
+			const innerHeightProfileVideo = $('.profile-2 .profile-video').innerHeight();
+			const profileRegistration = $('.profile-2 .profile-video .profile-video-registration');
+
+			if ( $(window).width() <= '1100' ) { 	
+
+				if ( scrollTop > (offsetProfileVideo + innerHeightProfileVideo) ) {
+
+					profileRegistration.addClass('fixed-registration');
+
+				} else {
+
+					profileRegistration.removeClass('fixed-registration');					
+
+				}
+
+			}
+
+		}
 
 
 

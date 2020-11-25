@@ -401,6 +401,15 @@
 		.information-menu
 			display: none
 
+	.information-wrapper.profile-2-wrapper	
+
+		.information.profile-2
+
+			.profile-video	
+				
+				.profile-video-registration
+					display: inline-block
+
 
 @media only screen and (max-width : 1030px)
 
@@ -501,6 +510,7 @@
 
 					.item						
 						white-space: nowrap
+						flex: 0 0 auto
 
 			.profile-project
 
@@ -1139,6 +1149,58 @@
 		.information-wrapper-background-images
 			display: none		
 
+	.information-wrapper.profile-2-wrapper	
+		padding-top: 32px
+
+		.information.profile-2
+
+			.profile-title
+				font-size: 32px
+				line-height: 32px
+
+			.profile-level-mobile	
+				display: block
+
+			.profile-tags	
+				flex-wrap: nowrap
+				margin-bottom: 24px
+
+				.profile-tag-item-dekstop
+					display: none	
+
+			.profile-hashtags	
+				margin-bottom: 24px
+
+				.profile-hashtag-item	
+					width: 100%	
+
+			.profile-video	
+				margin-bottom: 32px
+				
+				.profile-video-registration
+					right: inherit
+					bottom: inherit
+					top: 48px
+					left: 50% 
+					transform: translateX(-50%)
+					width: 328px
+					max-width: calc(100% - 16px)
+					padding-top: 21px
+					padding-bottom: 19px
+
+				.profile-video-registration.fixed-registration	
+					position: fixed
+					bottom: 20px
+					right: 20px
+					top: inherit 
+					left: inherit
+					width: 224px
+					max-width: auto
+					padding-left: 56px
+					padding-right: 26px
+					padding-top: 14px
+					padding-bottom: 10px
+					transform: translateX(0)
 
 @media only screen and (max-width : 766px)
 
@@ -1527,7 +1589,28 @@
 								.item-content-more
 									bottom: 4px	
 
-										
+	.information-wrapper.profile-2-wrapper	
+
+		.information.profile-2	
+
+			.profile-2-text	
+				margin-bottom: 24px	
+
+			.profile-2-image-slider-wrapper	
+				padding-bottom: 72px
+				margin-bottom: 32px	
+
+				.profile-2-image-slider
+
+					.slick-next, .slick-prev 
+						background: transparent
+						bottom: -59px
+
+					.slick-prev 
+						right: 41px		
+
+					.slick-dots 
+						bottom: -36px						
 
 
 /* Extra Small Devices, Phones */
@@ -1556,6 +1639,23 @@
 				.search-button	
 					display: none	
 
+
+
+@media only screen and (max-width : 360px)
+
+	.information-wrapper.profile-2-wrapper	
+
+		.information.profile-2
+
+			.profile-video	
+				
+				.profile-video-registration
+					padding-top: 14px
+					padding-bottom: 10px
+					width: 224px
+
+				.profile-video-registration.fixed-registration	
+					padding-top: 14px
 
 
 /* Custom, iPhone Retina */
