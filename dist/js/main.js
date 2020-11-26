@@ -108,7 +108,7 @@ $(function() {
 	// search input
 
 
-	if ( $('.search-panel-wrapper-overlay').length ){
+	if ( $('.search-panel-wrapper-overlay').length ) {
 		
 		$('.main-header .user-interface .search').click(function() {
 
@@ -123,6 +123,194 @@ $(function() {
 		});
 
 	};
+
+
+	// text-slider
+
+
+	if ( $('.text-slider').length ) {
+
+		$('.text-slider').slick({
+			dots: false
+		});
+
+	};
+	
+
+	// information-slider
+
+
+	if ( $('.information .information-partners .slider-info').length ) {
+
+		$('.information .information-partners .slider-info').slick({
+			infinite: true,
+			dots: false,
+			slidesToShow: 4,
+			responsive: [
+				{
+				  breakpoint: 980,
+				  settings: {
+					slidesToShow: 3
+				  }
+				},
+				{
+					breakpoint: 767,
+					settings: {
+					  slidesToShow: 2,
+					  arrows: false
+					}
+				  }
+			]
+		});
+
+	};
+
+
+	if ( $('.information .information-command .slider-info').length ) {
+
+		$('.information .information-command .slider-info').slick({
+			infinite: true,
+			dots: false,
+			slidesToShow: 2,
+			responsive: [
+				{
+					breakpoint: 767,
+					settings: {
+					  slidesToShow: 1,
+					  arrows: false
+					}
+				  }
+			]
+		});
+
+	};
+
+
+	// profile_2-image-slider
+
+	if ( $('.profile-2 .profile-2-image-slider').length ) {
+
+		$('.profile-2 .profile-2-image-slider').slick({
+			infinite: true,
+			dots: true,
+			slidesToShow: 1
+		});
+
+	};
+
+
+
+
+
+
+
+
+	$(window).scroll(function(){
+
+		// fixed slider arrow at text-section
+
+		if ( $('.text-slider').length ) {			
+
+			const scrollTop = $(this).scrollTop();
+			const toTextSection = $(".text-slider").offset().top;
+			const heightTextSection = $(".text-slider").innerHeight();			
+
+			if ( scrollTop > toTextSection && scrollTop <= toTextSection + heightTextSection - 160)  {				
+
+				if ( $(window).width() >= '768' ) {
+					$(".text-slider .slick-arrow").css({"top" : scrollTop - 180});
+				}
+
+				if ( $(window).width() <= '767' ) {
+					$(".text-slider .slick-arrow").css({"top" : scrollTop - 120});
+				}
+						
+			} else {
+
+				if ( $(window).width() >= '1200' ) {
+					$(".text-slider .slick-arrow").css({"top" : 38});
+				} else if ( $(window).width() >= '768' ) {
+					$(".text-slider .slick-arrow").css({"top" : -65});
+				} else if ( $(window).width() <= '767' ) {
+					$(".text-slider .slick-arrow").css({"top" : -57});
+				}
+
+			}
+
+		};
+		
+		
+
+		// information-section left menu fixed
+
+		if ( $('.information-wrapper .information-menu').length ) {
+
+			const scrollTop = $(this).scrollTop();
+			const hegihtToInformationMenu = $('.information-wrapper .information-menu').offset().top;
+			const innerHeightInformationSection = $('.information-wrapper').innerHeight();
+			const innerHeightInformationMenu = $('.information-wrapper .information-menu .information-menu-list').innerHeight();			
+
+			if ( $(window).width() >= '1100' ) {
+
+				if ( scrollTop > (hegihtToInformationMenu - 60) && scrollTop < (innerHeightInformationSection - innerHeightInformationMenu) ) {
+					$(".information-wrapper .information-menu .information-menu-list").css({"top" : 60, 'position' : 'fixed'});
+				} else {
+					$(".information-wrapper .information-menu .information-menu-list").css({"top" : 'inherit', 'position' : 'inherit'});
+				}
+				
+			}
+
+		};
+
+		// profile_2-section registration button fixed
+
+		if ( $('.profile-2 .profile-video .profile-video-registration').length ) {
+
+			const scrollTop = $(this).scrollTop();
+			const offsetProfileVideo = $('.profile-2 .profile-video').offset().top;
+			const innerHeightProfileVideo = $('.profile-2 .profile-video').innerHeight();
+			const profileRegistration = $('.profile-2 .profile-video .profile-video-registration');
+
+			if ( $(window).width() <= '1100' ) { 	
+
+				if ( scrollTop > (offsetProfileVideo + innerHeightProfileVideo) ) {
+
+					profileRegistration.addClass('fixed-registration');
+
+				} else {
+
+					profileRegistration.removeClass('fixed-registration');					
+
+				}
+
+			}
+
+		}
+
+
+
+
+
+		
+
+	});
+
+
+	// area-section active inner menu in table
+
+	if ( $('.area-wrapper').length ) {
+
+		$('.area-wrapper .materials-table .open-list').click(function() {
+
+			$(this).toggleClass('active-open-list');
+
+			$(this).parents("td").children(".profile-list").slideToggle(300);
+
+		});
+
+	};
+
+	
 
  
 
