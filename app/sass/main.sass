@@ -80,8 +80,6 @@ p
 	margin: 0 auto
 	box-sizing: content-box 
 	position: relative
-	outline: 1px solid red
-
 
 
 // header 
@@ -1627,7 +1625,6 @@ p
 
 .area-map
 	height: 560px
-	outline: 1px solid red
 
 	.area-map-plug
 		display: block
@@ -2481,7 +2478,6 @@ p
 	position: relative
 
 	.information-menu
-		outline: 1px solid purple
 		min-width: 288px
 		max-width: 288px
 		box-sizing: border-box 
@@ -2509,7 +2505,6 @@ p
 					color: #00B8EC	
 
 	.information
-		outline: 1px solid green
 		flex-grow: 1
 		position: relative
 
@@ -2930,6 +2925,16 @@ p
 
 						.documet-description
 							color: #00B8EC	
+
+		.information-documents.information-documents-2
+			padding-bottom: 0
+			margin-bottom: 48px
+			border-bottom: 1px solid #102E3F
+
+		.information-documents.information-documents-3
+			padding-bottom: 8px
+			margin-bottom: 48px
+			border-bottom: 1px solid #102E3F	
 
 		.information-partners
 			border-bottom: 1px solid #FFFFFF
@@ -3357,7 +3362,6 @@ p
 		.profile-video	
 			margin-bottom: 48px
 			position: relative
-			outline: 1px solid yellow
 
 			video 
 				width: 100%
@@ -3430,8 +3434,23 @@ p
 		.profile-2-text.profile-2-text-2
 			margin-bottom: 64px
 
+		.profile-2-text.profile-2-text-3
+			border-bottom: 1px solid #102E3F
+			padding-bottom: 25px	
+
+		.profile-2-text.profile-2-text-4
+			margin-bottom: 64px
+		
+		.profile-2-text.profile-2-text-5
+			padding-bottom: 41px
+			margin-bottom: 64px
+			border-bottom: 1px solid #fff	
+
+		.profile-2-text.profile-2-text-6
+			margin-bottom: 32px	
+
 		.profile-2-image-slider-wrapper	
-			padding-bottom: 160px
+			padding-bottom: 130px
 			border-bottom: 1px solid #FFFFFF
 			position: relative
 			margin-bottom: 64px
@@ -3576,9 +3595,15 @@ p
 						color: #2F586F	
 
 		.profile-2-image-slider-wrapper.profile-2-image-slider-wrapper-2
-			padding-bottom: 144px
+			padding-bottom: 114px
 			border-bottom: none
 			margin-bottom: 0
+
+		.profile-2-image-slider-wrapper.profile-2-image-slider-wrapper-3
+			padding-bottom: 114px
+			border-bottom: 1px solid #102E3F
+			margin-bottom: 48px	
+			
 		
 		.profile-2-command			
 			border-bottom: 1px solid #FFFFFF
@@ -3686,12 +3711,84 @@ p
 			text-transform: uppercase
 			margin-bottom: 48px
 
-			
+		.profile-content-image
+			margin-bottom: 48px
 
+			img 
+				display: block 
+				width: 100%
+				height: auto
 
+		.proflile-text-list
+			margin-bottom: 32px	
 
+			.proflile-text-item
+				position: relative
+				font-family: Inter
+				font-style: normal
+				font-weight: 400
+				font-size: 17px
+				line-height: 24px
+				color: #FFFFFF
+				padding-left: 40px	
+				margin-bottom: 16px	
 
+				.blue
+					color: #00B8EC
 
+			.proflile-text-item:before 
+				content: "—"
+				display: inline-block
+				position: absolute 
+				left: 0 
+				top: 0
+
+		.proflile-text-list.proflile-text-list-2	
+			margin-bottom: 64px		
+			border-bottom: 1px solid #fff
+			padding-bottom: 48px
+
+		.information-2-partners-list
+			display: flex
+			flex-wrap: wrap
+			padding-bottom: 64px
+			border-bottom: 1px solid #fff
+			margin-bottom: 64px
+
+			.partners-list-item
+				box-sizing: border-box 
+				border: 1px solid #102E3F
+				height: 104px
+				width: 25%
+				display: flex 
+				justify-content: center 
+				align-items: center
+
+				.partners-list-link
+					display: flex 
+					justify-content: center 
+					align-items: center
+					width: 100%
+					height: 100%
+					cursor: pointer
+
+					.partners-list-icon
+						display: inline-block
+						transition: 0.6s
+
+				.partners-list-link:hover
+
+					.partners-list-icon
+						transform: scale(1.06)
+
+		.information-2-banner
+			display: block
+			margin-bottom: 128px
+
+			img 
+				display: block
+				width: 100%
+				height: auto
 
 
 
