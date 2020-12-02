@@ -8,10 +8,25 @@ $(function() {
 
 		$("#hamburger").toggleClass("hamburger-active");
 
-		$('.main-header .header-nav .header-nav-mobile .overlay-mobile-menu').fadeToggle(100);
+		$('.overlay-mobile-menu').fadeToggle(100);
 		
 		
 	});
+
+	// mobile menu overlay close
+
+
+	$('.overlay-mobile-menu .mobile-menu-wrapper').on('click', function (e) {
+
+        if (e.target !== this) {
+			return
+		}
+
+		$('.overlay-mobile-menu').fadeOut(100);	
+		$("#hamburger").removeClass("hamburger-active");	
+
+	});
+	
 
 
 	// header nav -> inner nav

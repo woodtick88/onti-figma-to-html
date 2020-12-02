@@ -230,173 +230,7 @@ p
 				transform: rotate(90deg)
 
 
-			.overlay-mobile-menu
-				display: none
-
-			.mobile-menu-wrapper
-				position: absolute 
-				top: 89px 
-				right: 0
-				z-index: 10
-				min-height: calc(100vh - 88px)
-				width: 100%
-				background-color: rgba(4, 18, 26, 0.7)
-				display: flex
-				justify-content: flex-end
-				padding-bottom: 100px				
-
-				.mobile-menu
-					background-color: #0A202C
-					padding: 40px
-					box-sizing: border-box
-					width: 384px
-					z-index: 5					
-					display: flex 
-					justify-content: space-between
-					flex-direction: column				
-
-					.mobile-menu-list
-						flex-grow: 1
-						padding-bottom: 216px
-						position: relative
-
-						.mobile-menu-item 
-							display: block
-							margin-bottom: 32px
-							color: #00B8EC
-
-							a
-								font-family: Blogger Sans
-								font-style: normal
-								font-weight: 500
-								font-size: 32px
-								line-height: 32px
-								letter-spacing: 0.02em
-								text-transform: uppercase
-
-							.name	
-								font-family: Blogger Sans
-								font-style: normal
-								font-weight: 500
-								font-size: 32px
-								line-height: 32px
-								letter-spacing: 0.02em
-								text-transform: uppercase
-								cursor: pointer
-
-						.mobile-menu-item:last-child 
-							margin-bottom: 0
-
-						.mobile-menu-item.mobile-menu-inner-nav	
-							color: #fff
-
-							.inner-nav
-								display: none
-								background-color: #0A202C
-								z-index: 5
-								position: absolute
-								top: 0
-								left: 0
-
-								.inner-nav-item
-									display: block
-									margin-bottom: 16px
-
-									.inner-nav-item-link
-										font-family: Inter
-										font-style: normal
-										font-weight: 400
-										font-size: 17px
-										line-height: 24px
-										color: #00B8EC
-
-									.back
-										display: block 
-										position: relative
-										font-family: Blogger Sans
-										font-style: normal
-										font-weight: 500
-										font-size: 14px
-										line-height: 16px
-										letter-spacing: 0.02em
-										text-transform: uppercase
-										color: #FFFFFF
-										padding-left: 32px
-										padding-bottom: 16px
-
-									.back:before 
-										content: ""
-										display: block 
-										position: absolute										
-										width: 16px
-										height: 14px
-										background: url(../img/mobile-inner-nav-icon.svg) center no-repeat
-										left: 0	
-										top: 1px
-
-
-
-					.information-links 
-
-						.connection-link
-							display: block
-							font-family: Blogger Sans
-							font-style: normal
-							font-weight: 500
-							font-size: 20px
-							line-height: 24px
-							letter-spacing: 0.02em
-							text-transform: uppercase
-							color: #00B8EC
-							margin-bottom: 32px
-
-							.about
-								display: block
-								font-family: Inter
-								font-style: normal
-								font-weight: 400
-								font-size: 13px
-								line-height: 16px
-								color: #FFFFFF
-
-						.mobile-menu-social-links	
-							display: flex 
-							justify-content: flex-start	
-							padding-top: 8px					
-
-							.link	
-								margin-right: 8px
-
-						.mobile-menu-bottom-links
-							margin-top: 40px
-
-							.link 
-								display: block
-								margin-bottom: 16px
-
-								a 
-									font-family: Inter
-									font-style: normal
-									font-weight: 400
-									font-size: 13px
-									line-height: 16px
-									color: #2F586F	
-
-							.link:last-child 
-								margin-bottom: 0			
-				
-					.registration
-						font-weight: 600
-						font-size: 13px
-						line-height: 16px
-						background: #00B8EC
-						border-radius: 24px
-						width: 192px
-						min-height: 40px	
-						display: none 
-						align-items: center
-						justify-content: center	
-						cursor: pointer
+			
 
 	.user-interface
 		display: flex
@@ -567,7 +401,178 @@ p
 				color: #00B8EC
 
 
+
+// header mobile-menu	
+
+
+.overlay-mobile-menu
+	display: none
+
+.mobile-menu-wrapper
+	position: absolute 
+	top: 89px 
+	right: 0
+	z-index: 10
+	min-height: calc(100vh - 88px)
+	width: 100%
+	background-color: rgba(4, 18, 26, 0.7)
+	display: flex
+	justify-content: flex-end
+	padding-bottom: 100px				
+
+	.mobile-menu
+		background-color: #0A202C
+		padding: 40px
+		box-sizing: border-box
+		width: 384px
+		z-index: 5					
+		display: flex 
+		justify-content: space-between
+		flex-direction: column			
+
+		.mobile-menu-list
+			flex-grow: 1
+			padding-bottom: 216px
+			position: relative
+
+			.mobile-menu-item 
+				display: block
+				margin-bottom: 32px
+				color: #00B8EC
+
+				a
+					font-family: Blogger Sans
+					font-style: normal
+					font-weight: 500
+					font-size: 32px
+					line-height: 32px
+					letter-spacing: 0.02em
+					text-transform: uppercase
+
+				.name	
+					font-family: Blogger Sans
+					font-style: normal
+					font-weight: 500
+					font-size: 32px
+					line-height: 32px
+					letter-spacing: 0.02em
+					text-transform: uppercase
+					cursor: pointer
+
+			.mobile-menu-item:last-child 
+				margin-bottom: 0
+
+			.mobile-menu-item.mobile-menu-inner-nav	
+				color: #fff
+
+				.inner-nav
+					display: none
+					background-color: #0A202C
+					z-index: 5
+					position: absolute
+					top: 0
+					left: 0
+
+					.inner-nav-item
+						display: block
+						margin-bottom: 16px
+
+						.inner-nav-item-link
+							font-family: Inter
+							font-style: normal
+							font-weight: 400
+							font-size: 17px
+							line-height: 24px
+							color: #00B8EC
+
+						.back
+							display: block 
+							position: relative
+							font-family: Blogger Sans
+							font-style: normal
+							font-weight: 500
+							font-size: 14px
+							line-height: 16px
+							letter-spacing: 0.02em
+							text-transform: uppercase
+							color: #FFFFFF
+							padding-left: 32px
+							padding-bottom: 16px
+
+						.back:before 
+							content: ""
+							display: block 
+							position: absolute										
+							width: 16px
+							height: 14px
+							background: url(../img/mobile-inner-nav-icon.svg) center no-repeat
+							left: 0	
+							top: 1px
+
+
+
+		.information-links 
+
+			.connection-link
+				display: block
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 20px
+				line-height: 24px
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				color: #00B8EC
+				margin-bottom: 32px
+
+				.about
+					display: block
+					font-family: Inter
+					font-style: normal
+					font-weight: 400
+					font-size: 13px
+					line-height: 16px
+					color: #FFFFFF
+
+			.mobile-menu-social-links	
+				display: flex 
+				justify-content: flex-start	
+				padding-top: 8px					
+
+				.link	
+					margin-right: 8px
+
+			.mobile-menu-bottom-links
+				margin-top: 40px
+
+				.link 
+					display: block
+					margin-bottom: 16px
+
+					a 
+						font-family: Inter
+						font-style: normal
+						font-weight: 400
+						font-size: 13px
+						line-height: 16px
+						color: #2F586F	
+
+				.link:last-child 
+					margin-bottom: 0			
 	
+		.registration
+			font-weight: 600
+			font-size: 13px
+			line-height: 16px
+			background: #00B8EC
+			border-radius: 24px
+			width: 192px
+			min-height: 40px	
+			display: none 
+			align-items: center
+			justify-content: center	
+			cursor: pointer
+
 
 // breadcrumbs	
 
@@ -608,6 +613,7 @@ p
 
 .materials-wrapper
 	position: relative
+	overflow: hidden
 
 .materials
 	padding-top: 80px
@@ -829,6 +835,7 @@ p
 		.materials-background-image
 			display: inline-block 
 			position: absolute
+			z-index: -1
 
 		.materials-background-image-1			
 			right: 256px
@@ -852,6 +859,7 @@ p
 	.materials-wrapper-background-image	
 		display: inline-block 
 		position: absolute
+		z-index: -1
 
 	.materials-wrapper-background-image-1			
 		right: 0
@@ -1215,12 +1223,14 @@ p
 				position: absolute
 				top: -66px 
 				right: -13px
+				z-index: -1
 
 			.search-background-image-2
 				display: inline-block
 				position: absolute
 				top: 24%
 				right: -38px	
+				z-index: -1
 
 	.search-wrapper-background-images	
 
@@ -1229,24 +1239,28 @@ p
 			position: absolute
 			top: 21.5%
 			left: 50px	
+			z-index: -1
 
 		.search-background-image-4
 			display: inline-block
 			position: absolute
 			top: 51%
 			left: 0		
+			z-index: -1
 
 		.search-background-image-5
 			display: inline-block
 			position: absolute
 			top: 178px
 			right: 0	
+			z-index: -1
 
 		.search-background-image-6
 			display: inline-block
 			position: absolute
 			top: 29%
-			right: 24px			
+			right: 24px	
+			z-index: -1		
 
 
 // text-slider-section
@@ -1392,12 +1406,14 @@ p
 				position: absolute
 				right: 177px
 				top: -76px
+				z-index: -1
 
 			.text-slider-background-image-2
 				display: inline-block 
 				position: absolute
 				right: 154px
 				top: 43.3%	
+				z-index: -1
 
 	.text-slider-wrapper-background-images	
 
@@ -1406,24 +1422,28 @@ p
 			position: absolute
 			top: 24.8%
 			left: 50px	
+			z-index: -1
 
 		.text-slider-background-image-4
 			display: inline-block
 			position: absolute
 			top: 57.1%
 			left: 0	
+			z-index: -1
 
 		.text-slider-background-image-5
 			display: inline-block
 			position: absolute
 			top: 13.2%
 			right: 0
+			z-index: -1
 
 		.text-slider-background-image-6
 			display: inline-block
 			position: absolute
 			top: 32.3%
-			right: 24px				
+			right: 24px	
+			z-index: -1			
 
 
 
@@ -1763,6 +1783,7 @@ p
 			.news-backgroound-image
 				display: inline-block 
 				position: absolute
+				z-index: -1
 
 			.news-backgroound-image-1	
 				top: -80px
@@ -1809,6 +1830,7 @@ p
 		.news-wrapper-backgroound-image
 			display: inline-block 
 			position: absolute
+			z-index: -1
 
 		.news-wrapper-backgroound-image-11
 			right: 0 
