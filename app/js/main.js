@@ -304,11 +304,25 @@ $(function() {
 
 
 
-
-
 		
 
 	});
+
+
+
+	// left menu in section information_1
+
+
+	$(".information-menu .information-menu-list").on("click","a", function (event) {
+
+        event.preventDefault();
+        let id  = $(this).attr('href'),
+            top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1500);
+		
+    });
+
+
 
 
 	// area-section active inner menu in table
