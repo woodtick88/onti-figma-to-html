@@ -303,10 +303,44 @@ $(function() {
 		}
 
 
+		// about-olympiad-section left-menu fixed
+
+		if ( $('.about-olympiad .gallery-tabs-buttons-wrapper').length ) {
+
+			const scrollTop = $(this).scrollTop();
+			const hegihtToOlympiadSection = $('.about-olympiad').offset().top;
+			const innerHeightOlympiadSection = $('.about-olympiad').innerHeight();
+			const innerHeightOlympiadnMenu = $('.about-olympiad .gallery-tabs-buttons-wrapper .gallery-tabs-buttons').innerHeight();	
+			
+
+			if ( $(window).width() > '1200' ) {
+
+				if ( scrollTop > hegihtToOlympiadSection && scrollTop < (hegihtToOlympiadSection + innerHeightOlympiadSection - innerHeightOlympiadnMenu) ) {
+					$(".about-olympiad .gallery-tabs-buttons-wrapper .gallery-tabs-buttons").css({"top" : 0, 'position' : 'fixed'});
+				} else {
+					$(".about-olympiad .gallery-tabs-buttons-wrapper .gallery-tabs-buttons").css({"top" : "inherit", 'position' : 'inherit'});
+				}
+				
+			}
+
+			if ( $(window).width() <= '1200' ) {
+
+				if ( scrollTop > hegihtToOlympiadSection && scrollTop < (hegihtToOlympiadSection + innerHeightOlympiadSection - innerHeightOlympiadnMenu) ) {
+					$(".about-olympiad .gallery-tabs-buttons-wrapper").css({"top" : 0, 'position' : 'fixed'});
+				} else {
+					$(".about-olympiad .gallery-tabs-buttons-wrapper").css({"top" : "inherit", 'position' : 'inherit'});
+				}
+				
+			}
+
+		};
+
+
 
 		
 
 	});
+
 
 
 
@@ -336,6 +370,19 @@ $(function() {
 			$(this).parents("td").children(".profile-list").slideToggle(300);
 
 		});
+
+	};
+
+
+	// tabs on index page section - about-olympiad
+
+	if ( $('.about-olympiad').length ) {
+
+		$(".tab-item").not(":first").fadeOut();
+		$(".gallery-tabs-buttons .tab").click(function() {
+			$(".gallery-tabs-buttons .tab").removeClass("active").eq($(this).index()).addClass("active");
+			$(".tab-item").fadeOut(200).eq($(this).index()).fadeIn()
+		}).eq(0).addClass("active"); 
 
 	};
 

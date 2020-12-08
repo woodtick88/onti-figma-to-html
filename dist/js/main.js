@@ -8,10 +8,25 @@ $(function() {
 
 		$("#hamburger").toggleClass("hamburger-active");
 
-		$('.main-header .header-nav .header-nav-mobile .overlay-mobile-menu').fadeToggle(100);
+		$('.overlay-mobile-menu').fadeToggle(100);
 		
 		
 	});
+
+	// mobile menu overlay close
+
+
+	$('.overlay-mobile-menu .mobile-menu-wrapper').on('click', function (e) {
+
+        if (e.target !== this) {
+			return
+		}
+
+		$('.overlay-mobile-menu').fadeOut(100);	
+		$("#hamburger").removeClass("hamburger-active");	
+
+	});
+	
 
 
 	// header nav -> inner nav
@@ -288,12 +303,60 @@ $(function() {
 		}
 
 
+		// about-olympiad-section left-menu fixed
+
+		if ( $('.about-olympiad .gallery-tabs-buttons-wrapper').length ) {
+
+			const scrollTop = $(this).scrollTop();
+			const hegihtToOlympiadSection = $('.about-olympiad').offset().top;
+			const innerHeightOlympiadSection = $('.about-olympiad').innerHeight();
+			const innerHeightOlympiadnMenu = $('.about-olympiad .gallery-tabs-buttons-wrapper .gallery-tabs-buttons').innerHeight();	
+			
+
+			if ( $(window).width() > '1200' ) {
+
+				if ( scrollTop > hegihtToOlympiadSection && scrollTop < (hegihtToOlympiadSection + innerHeightOlympiadSection - innerHeightOlympiadnMenu) ) {
+					$(".about-olympiad .gallery-tabs-buttons-wrapper .gallery-tabs-buttons").css({"top" : 0, 'position' : 'fixed'});
+				} else {
+					$(".about-olympiad .gallery-tabs-buttons-wrapper .gallery-tabs-buttons").css({"top" : "inherit", 'position' : 'inherit'});
+				}
+				
+			}
+
+			if ( $(window).width() <= '1200' ) {
+
+				if ( scrollTop > hegihtToOlympiadSection && scrollTop < (hegihtToOlympiadSection + innerHeightOlympiadSection - innerHeightOlympiadnMenu) ) {
+					$(".about-olympiad .gallery-tabs-buttons-wrapper").css({"top" : 0, 'position' : 'fixed'});
+				} else {
+					$(".about-olympiad .gallery-tabs-buttons-wrapper").css({"top" : "inherit", 'position' : 'inherit'});
+				}
+				
+			}
+
+		};
 
 
 
 		
 
 	});
+
+
+
+
+	// left menu in section information_1
+
+
+	$(".information-menu .information-menu-list").on("click","a", function (event) {
+
+        event.preventDefault();
+        let id  = $(this).attr('href'),
+            top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1500);
+		
+    });
+
+
 
 
 	// area-section active inner menu in table
@@ -307,6 +370,19 @@ $(function() {
 			$(this).parents("td").children(".profile-list").slideToggle(300);
 
 		});
+
+	};
+
+
+	// tabs on index page section - about-olympiad
+
+	if ( $('.about-olympiad').length ) {
+
+		$(".tab-item").not(":first").fadeOut();
+		$(".gallery-tabs-buttons .tab").click(function() {
+			$(".gallery-tabs-buttons .tab").removeClass("active").eq($(this).index()).addClass("active");
+			$(".tab-item").fadeOut(200).eq($(this).index()).fadeIn()
+		}).eq(0).addClass("active"); 
 
 	};
 

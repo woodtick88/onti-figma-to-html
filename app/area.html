@@ -180,7 +180,7 @@
 							Регион
 						</h4>
 
-						<select class="custom-select">
+						<select class="custom-select" multiple>
 							<option>Все регионы</option>
 							<option>Все регионы1</option>
 							<option>Все регионы2</option>
@@ -196,7 +196,7 @@
 							Город
 						</h4>
 
-						<select class="custom-select">
+						<select class="custom-select" multiple>
 							<option>Все города</option>
 							<option>Все города 1</option>
 							<option>Все города 2</option>
@@ -212,7 +212,7 @@
 							Тема
 						</h4>
 
-						<select class="custom-select">
+						<select class="custom-select" multiple>
 							<option>Все темы</option>
 							<option>Все темы 1</option>
 							<option>Все темы 2</option>
@@ -228,7 +228,7 @@
 							Сортировка
 						</h4>
 
-						<select class="custom-select">
+						<select class="custom-select" multiple>
 							<option>По названию</option>
 							<option>По названию 1</option>
 							<option>По названию 2</option>
@@ -237,6 +237,14 @@
 						</select>
 
 					</label>
+
+					<div class="options-reset-wrapper">
+
+						<button class="options-reset">
+							Очистить
+						</button>
+
+					</div>
 
 					<label class="search-input">
 						<input type="search" placeholder="Поиск">
@@ -252,7 +260,7 @@
 					<thead>
 
 						<tr class="titles-row">
-							<th class="titles-row-name">
+							<th class="titles-row-name table-sort">
 								Название 
 							</th>
 							<th class="titles-row-organizaion">	
@@ -1157,7 +1165,55 @@
 
 			</div>
 
-		</div>
+			<div class="search-pagination">
+
+				<ul class="page-links">
+
+					<li class="page-links-item current">
+						<a href="#">
+							1
+						</a>
+					</li>
+
+					<li class="page-links-item">
+						<a href="#">
+							2
+						</a>
+					</li>
+
+					<li class="page-links-item">
+						<a href="#">
+							3
+						</a>
+					</li>
+
+					<li class="page-links-item">
+						<a href="#">
+							4
+						</a>
+					</li>
+
+					<li class="page-links-item more">
+						<a href="#">
+							...
+						</a>
+					</li>
+
+					<li class="page-links-item">
+						<a href="#">
+							56
+						</a>
+					</li>
+
+				</ul>
+
+				<button class="next">
+					Дальше
+				</button>
+
+			</div>	
+
+		</div>		
 
 	</div>
 

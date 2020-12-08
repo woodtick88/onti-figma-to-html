@@ -143,6 +143,26 @@
 				top: 73.8%		
 
 
+@media only screen and (max-width : 1250px)	
+	
+
+	.whom
+		padding-left: 40px
+		padding-right: 40px
+		padding-top: 40px
+		padding-bottom: 38px
+		flex-wrap: wrap
+		flex-direction: column
+
+		.whom-title
+			margin-bottom: 16px
+
+		.whom-logo
+			left: inherit 
+			right: -84px
+			top: 4px
+
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	
@@ -235,6 +255,8 @@
 				.search-input
 					width: 100%	
 					padding-top: 24px
+					margin-top: 0
+					max-width: 100%
 
 	.profile-wrapper
 
@@ -392,6 +414,52 @@
 				right: -104px
 				top: 6455px										
 
+	.header-background-wrapper
+
+		.header-wrapper
+
+			.main-header 
+
+				.header-nav 
+
+					.header-nav-mobile
+						border-left: 1px solid rgba(255,255,255,0.1)
+
+	.main-content-wrapper
+
+		.about-olympiad	
+			flex-direction: column	
+
+			.gallery-tabs-overlay-wrapper	
+				height: auto
+				position: relative	
+				margin-bottom: 64px
+				max-width: 100%	
+				overflow: hidden
+
+				.gallery-tabs-buttons-wrapper	
+					max-width: 100%	
+					background-color: #0a202c
+					position: relative	
+					overflow-x: scroll					
+
+					.gallery-tabs-buttons
+						flex-direction: row
+						overflow-x: scroll
+						background-color: #0a202c
+
+						.tab
+							margin-bottom: 0
+							margin-right: 8px
+
+						.tab:last-child
+							margin-rigt: 0	
+
+
+
+			.tab-content
+				max-width: 100%
+
 
 
 @media only screen and (max-width : 1100px)
@@ -409,6 +477,116 @@
 				
 				.profile-video-registration
 					display: inline-block
+
+	.header-background-wrapper		
+
+		.header-content	
+
+			.header-content-wrapper
+				padding-bottom: 256px
+
+				.header-content-title
+					width: 100% 
+					max-width: 100%					
+
+				.header-content-description	
+					max-width: 336px
+					order: 1
+
+				.header-content-button-wrapper	
+					width: auto
+
+					.header-content-button	
+						min-width: 224px
+
+	.whom-wrapper
+		padding-top: 20px
+		padding-bottom: 96px
+		margin-top: -200px	
+
+	.whom
+
+		.whom-about
+			max-width: 294px
+
+	.main-content-wrapper				
+
+		.about-data		
+			flex-direction: column
+
+			.about-data-title
+				position: inherit 
+				top: inherit 
+				left: inherit	
+				writing-mode: horizontal-tb		
+				transform: none
+				margin-bottom: 48px
+				align-items: flex-start			
+
+		.registration-schedule	
+			flex-direction: column
+
+			.registration-schedule-title
+				position: inherit 
+				top: inherit 
+				left: inherit	
+				writing-mode: horizontal-tb		
+				transform: none
+				margin-bottom: 48px
+				align-items: flex-start		
+
+		.main-content-background
+
+			.main-content-image-1
+				top: 0px
+				right: 33px
+
+			.main-content-image-2
+				display: none
+
+			.main-content-image-3
+				top: 226px
+				left: -135px
+
+			.main-content-image-4
+				display: none	
+
+			.main-content-image-5
+				display: none	
+
+			.main-content-image-6
+				top: 1183px
+				left: 0px
+
+			.main-content-image-7
+				top: 779px
+				right: -5px		
+
+			.main-content-image-8
+				top: 1465px
+				right: -28px	
+
+			.main-content-image-9
+				top: 1957px
+				right: 17px	
+
+			.main-content-image-10
+				display: none	
+
+			.main-content-image-11
+				display: none	
+
+			.main-content-image-12
+				display: none	
+
+			.main-content-image-13
+				top: inherit
+				left: 29px	
+				bottom: 29px	
+
+		.main-content-wrapper-background
+			display: none								
+
 
 
 @media only screen and (max-width : 1030px)
@@ -446,10 +624,13 @@
 
 	.materials-wrapper.area-wrapper
 
+		.search-pagination
+			padding-bottom: 80px
+
 		.materials.area
 
 			.materials-table
-				margin-bottom: 80px
+				margin-bottom: 48px
 
 				.titles-row
 					display: none
@@ -825,8 +1006,13 @@
 			.options-select:nth-child(even)
 				margin-right: 0	
 
+			.options-reset-wrapper	
+				justify-content: flex-start
+				width: 100%
+				padding-top: 0
+
 		.materials-table
-			margin-bottom: 112px
+			margin-bottom: 48px
 
 			.titles-row
 				display: none
@@ -976,7 +1162,11 @@
 			.more-news-wrapper
 				padding-bottom: 112px		
 
-	
+	.materials-wrapper
+
+		.search-pagination
+			padding-bottom: 112px
+
 
 @media only screen and (max-width : 767px)
 
@@ -985,6 +1175,49 @@
 
 	.breadcrumbs
 		display: none
+
+	.materials-wrapper
+
+		.search-pagination
+			padding-top: 0
+			padding-bottom: 50px
+
+			.page-links
+
+				.page-links-item 
+
+					a
+						width: auto
+						height: auto
+						min-width: 24px 
+						min-height: 20px
+						background: transparent
+
+				.page-links-item.more
+
+					a	
+						width: auto
+						height: auto
+						min-width: 24px 
+						min-height: 20px	
+
+				.page-links-item.current
+
+					a
+						background: transparent		
+
+			.next	
+					padding-top: 0
+					padding-bottom: 0 
+					padding-left: 0
+					padding-right: 40px	
+					background: transparent	
+
+			.next:before
+				right: 0
+				top: 50% 
+				transform: translateY(-50%)
+
 
 	.materials
 		padding-top: 25px
@@ -1151,6 +1384,9 @@
 			display: none
 
 	.materials-wrapper.area-wrapper
+
+		.search-pagination
+			padding-bottom: 32px
 
 		.materials.area
 
@@ -1462,9 +1698,113 @@
 		.profile-2-wrapper-background-images
 			display: none
 
+	.header-background-wrapper		
+
+		.header-content	
+
+			.header-content-wrapper
+				padding-top: 32px
+				padding-bottom: 32px
+
+				.header-content-title
+					font-size: 20px
+					line-height: 24px	
+					margin-bottom: 16px			
+
+				.header-content-description	
+					max-width: 100%
+					width: 100%
+					font-size: 17px
+					line-height: 24px
+					margin-bottom: 32px
+					order: 0
+
+				.header-content-button-wrapper	
+					width: 100%
+					justify-content: center
+
+					.header-content-button	
+						min-width: 288px
 
 
+	.whom-wrapper
+		padding-top: 0
+		padding-bottom: 112px
+		margin-top: 0	
 
+	.whom
+		padding-left: 18px
+		padding-right: 16px
+		padding-top: 32px
+		padding-bottom: 192px
+
+		.whom-title
+			font-size: 20px
+			line-height: 24px
+			margin-bottom: 24px
+
+		.whom-about
+			max-width: 100%
+			display: flex
+			flex-direction: column
+
+			.whom-about-button
+				min-width: auto
+				max-width: 288px
+				width: 288px
+				align-self: center
+
+		.whom-logo
+			top: inherit 
+			right: inherit	
+			left: 50%
+			transform: translateX(-50%)
+			bottom: -75px
+			width: 297px
+			height: 243px
+
+	.main-content-wrapper		
+
+		.about-data		
+
+			.about-data-title
+				margin-bottom: 24px
+				font-size: 28px
+				line-height: 32px
+				
+		.registration-schedule	
+			padding-bottom: 32px
+			margin-bottom: 32px
+
+			.registration-schedule-title
+				margin-bottom: 24px
+				font-size: 28px
+				line-height: 32px		
+
+	
+		.about-olympiad	
+
+			.gallery-tabs-overlay-wrapper	
+				margin-bottom: 32px	
+
+			.tab-content
+
+				.tab-item	
+					padding-bottom: 0
+
+					.tab-item-about	
+						margin-bottom: 32px	
+
+						.tab-item-title	
+							font-size: 20px
+							line-height: 24px	
+							margin-bottom: 24px	
+
+						.tab-item-text	
+							padding-bottom: 32px
+
+		.main-content-background
+			display: none
 
 
 @media only screen and (max-width : 766px)
@@ -1760,7 +2100,35 @@
 				margin-bottom: 24px
 				border-bottom: 1px solid #102E3F	
 
+	.main-content-wrapper
 
+		.about-data
+			margin-bottom: 32px
+
+			.information-stages-wrapper
+				padding-bottom: 32px
+
+				.information-stages-title
+					margin-bottom: 24px
+
+				.information-stages-list
+					margin-bottom: 24px
+
+					.list-item
+						padding-top: 16px
+						padding-bottom: 16px	
+						flex-wrap: wrap						
+
+						.list-item-title
+							width: 100%	
+
+				.information-stages-list.last	
+					margin-bottom: 24px	
+
+				.information-stages-more
+					width: 288px
+					margin: 0 auto
+					display: block
 
 
 @media only screen and (max-width : 650px)
