@@ -386,6 +386,25 @@ $(function() {
 
 	};
 
+
+	// index page scroll .whom-about-button to #id-section
+
+
+	if ( $('.whom .whom-about-button').length ) { 
+
+		$(".whom .whom-about-button").click(function (event) {
+
+			event.preventDefault();
+			let id  = $(this).attr('href'),
+				top = $(id).offset().top;
+			$('body,html').animate({scrollTop: top}, 1500);
+			
+		});	
+
+	};
+
+
+	
 	
 
  
