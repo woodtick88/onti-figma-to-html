@@ -715,9 +715,11 @@ p
 		padding-bottom: 64px
 		display: flex 
 		justify-content: flex-start
+		flex-wrap: wrap
 
 		.options-select
 			margin-right: 32px
+			width: 256px
 
 			.options-select-title
 				font-family: Inter
@@ -785,9 +787,35 @@ p
 		.options-reset-wrapper	
 			display: flex 
 			align-items: center
-			padding-top: 24px
+			padding-top: 32px
 			flex-grow: 1
-			justify-content: flex-end
+			justify-content: flex-start
+
+			.options-apply
+				border: none
+				outline: none
+				font-family: Inter
+				font-style: normal
+				font-weight: 600
+				font-size: 13px
+				line-height: 16px
+				display: inline-block
+				text-align: center
+				color: #FFFFFF
+				background: #00B8EC
+				border-radius: 24px
+				padding: 12px 16px
+				transition: 0.6s
+				box-sizing: border-box 
+				min-width: 192px
+				margin-right: 34px
+
+			.options-apply:hover
+				background: #245aa9	
+
+			.options-apply:focus	
+				border: none
+				outline: none	
 
 			.options-reset
 				display: inline-block
@@ -818,9 +846,7 @@ p
 				height: 16px
 				background: url(../img/area/options-reset-icon.svg)	center no-repeat
 				left: 0
-
-
-
+		
 	.materials-table
 		width: 100%
 		border-collapse: collapse
@@ -1604,6 +1630,7 @@ p
 				flex-grow: 1
 				max-width: 544px
 				margin-top: 32px
+				display: none
 
 				input[type="search"]
 					display: inline-block
@@ -1642,6 +1669,15 @@ p
 
 				.search-input-icon:hover
 					transform: scale(1.1)	
+
+			.options-select.tablet-max-width
+				width: 100%
+				max-width: 100%
+
+				.selectric-wrapper	
+
+					.selectric	
+						width: 100%
 
 		.materials-table
 			margin-bottom: 48px
