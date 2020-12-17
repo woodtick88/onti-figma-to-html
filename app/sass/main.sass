@@ -781,6 +781,8 @@ p
 					.button
 						transform: rotate(180deg)
 
+		
+
 		.options-select.tablet 
 			display: none
 
@@ -847,6 +849,59 @@ p
 				background: url(../img/area/options-reset-icon.svg)	center no-repeat
 				left: 0
 		
+
+		.options-select.custom-select-2
+			width: 100%
+			flex: 0 0 auto
+
+			.select2-container, .select2-selection 
+				width: 100% !important								
+
+			.select2-container	
+				background: transparent
+				border: 1px solid #2F586F
+				border-radius: 4px
+				box-sizing: border-box
+				padding-top: 12px
+				padding-bottom: 12px
+				padding-left: 16px
+				padding-right: 48px
+				font-family: Inter
+				font-style: normal
+				font-weight: normal
+				font-size: 17px
+				line-height: 24px
+				display: block
+				align-items: center				
+
+			.select2-selection.select2-selection--single
+				background: transparent
+				border: none
+				outline: none				
+
+			.select2-container--default 
+
+				.select2-selection--single 
+					height: auto
+
+					.select2-selection__rendered
+						font-family: Inter
+						font-style: normal
+						font-weight: normal
+						font-size: 17px
+						line-height: 24px	
+						color: #FFFFFF	
+						padding-left: 0 
+						padding-right: 0
+
+
+		
+
+
+		
+
+
+
 	.materials-table
 		width: 100%
 		border-collapse: collapse
@@ -1511,54 +1566,29 @@ p
 				left: 0 
 				top: 0		
 
-		.slide-item:focus
-			outline: none 
+	
+		.text-slider-arrows
+			display: flex 
+			justify-content: space-between
+			margin-top: 64px
 
-		.slick-next, .slick-prev 
-			font-size: 0
-			line-height: 0
-			position: absolute
-			display: block			
-			padding: 0
-			cursor: pointer
-			color: transparent
-			border: none
-			outline: 0
-			background: #102E3F
-			width: 64px
-			height: 64px
-			border-radius: 50%
-			z-index: 5	
-			top: 38px
-			transition: 0.6s
+			.text-slider-link
+				display: block 
+				background: #102E3F
+				width: 64px
+				height: 64px
+				border-radius: 50%
+				transition: 0.6s
+				display: flex 
+				justify-content: center 
+				align-items: center
 
-		.slick-next:hover, .slick-prev:hover
-			background: #00B8EC	
+			.text-slider-link.text-slider-link-next	
+				transform: rotate(180deg)
 
-		.slick-prev 
-			left: -192px	
+			.text-slider-link:hover
+				background: #00B8EC	
 
-		.slick-next
-			right: -192px		
-
-
-		.slick-next:before, .slick-prev:before 
-			content: ""
-			font-size: 0
-			line-height: 0
-			opacity: 1
-			color: #fff
-			display: block 
-			position: absolute
-			background: url(../img/text/slider-arrow-icon.svg) center no-repeat
-			width: 24px
-			height: 16px
-			left: 50% 
-			top: 50% 
-			transform: translateX(-50%) translateY(-50%)
-
-		.slick-next:before	
-			transform: translateX(-50%) translateY(-50%) rotate(180deg)
 
 	.text-slider-background
 		position: relative

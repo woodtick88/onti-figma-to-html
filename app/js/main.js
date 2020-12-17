@@ -156,17 +156,6 @@ $(function() {
 	};
 
 
-	// text-slider
-
-
-	if ( $('.text-slider').length ) {
-
-		$('.text-slider').slick({
-			dots: false
-		});
-
-	};
-	
 
 	// information-slider
 
@@ -497,8 +486,10 @@ $(function() {
 	 };
 
 
-
 	
+	// select2 plagin on page material and area
+
+	$('.js-example-basic-single').select2();
 
 
 	
