@@ -486,7 +486,15 @@ $(function() {
 	 };
 
 
-	
+	// Initialize select2
+	$(".custom-custom-select2").select2();
+
+
+	// select search input placeholder
+
+	$('.custom-custom-select2').select2().on('select2:open', function(e){
+		$('.select2-search__field').attr('placeholder', 'Поиск');
+	})
 
 	
 	
