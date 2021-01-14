@@ -3910,6 +3910,32 @@ p
 					left: 0 
 					top: 0	
 
+			ol
+				margin-bottom: 32px	
+				counter-reset: list-ol
+
+				li
+					position: relative
+					font-family: Inter
+					font-style: normal
+					font-weight: 400
+					font-size: 17px
+					line-height: 24px
+					color: #FFFFFF
+					padding-left: 40px	
+					margin-bottom: 16px	
+
+					.blue
+						color: #00B8EC	
+
+				li:before 
+					content: counter(list-ol) ". "
+					counter-increment: list-ol
+					display: inline-block
+					position: absolute 
+					left: 0 
+					top: 0			
+
 		.profile-2-text.profile-2-text-2
 			margin-bottom: 64px
 
