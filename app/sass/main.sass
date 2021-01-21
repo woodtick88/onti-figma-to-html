@@ -902,7 +902,46 @@ p
 					font-weight: 400
 					font-size: 14px
 					line-height: 20px
-					color: #00B8EC						
+					color: #00B8EC	
+					display: inline-block 
+					position: relative
+					box-sizing: border-box
+					padding-right: 20px
+
+					.icon-info
+						display: block 
+						position: absolute
+						width: 16px 
+						height: 16px
+						background: url(../img/information_1/icon-info.svg) center no-repeat
+						background-size: cover
+						right: 0
+						bottom: 0
+						transition: 0.3s
+
+						.icon-info-text
+							display: none
+							font-family: Inter
+							font-style: normal
+							font-weight: normal
+							font-size: 13px
+							line-height: 16px
+							color: #FFFFFF
+							position: absolute
+							box-sizing: border-box
+							padding: 8px 12px
+							background: #102E3F
+							border-radius: 4px
+							width: 322px
+							left: 0
+							transform: translateY(calc(-100% - 8px))
+							z-index: 2
+
+					.icon-info:hover
+						background: url(../img/information_1/icon-info-hover.svg) center no-repeat	
+
+						.icon-info-text
+							display: block					
 
 		.data-row:hover 
 			background-color: #0F2430
@@ -3240,6 +3279,42 @@ p
 								height: 16px
 								background: url(../img/information_1/information-documents-icon.svg) center no-repeat
 								transition: 0.3s
+								position: relative
+
+								.icon-info
+									display: block 
+									position: absolute
+									width: 16px 
+									height: 16px
+									background: url(../img/information_1/icon-info.svg) center no-repeat
+									background-size: cover
+									right: -27px
+									top: 50% 
+									transform: translateY(-50%)
+									transition: 0.3s
+
+									.icon-info-text
+										display: none
+										font-family: Inter
+										font-style: normal
+										font-weight: normal
+										font-size: 13px
+										line-height: 16px
+										color: #FFFFFF
+										position: absolute
+										box-sizing: border-box
+										padding: 8px 12px
+										background: #102E3F
+										border-radius: 4px
+										width: 322px
+										left: 0
+										transform: translateY(calc(-100% - 8px))
+
+								.icon-info:hover
+									background: url(../img/information_1/icon-info-hover.svg) center no-repeat	
+
+									.icon-info-text
+										display: block
 
 						.documet-description
 							font-family: Inter
