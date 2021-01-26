@@ -4811,8 +4811,86 @@ p
 			right: 0		
 
 
+// faq.html	
 
+.text-slider-wrapper.faq
 
+	.text-slider
+
+		h3 
+				font-family: Blogger Sans
+				font-style: normal
+				font-weight: 500
+				font-size: 32px
+				line-height: 32px
+				letter-spacing: .02em
+				text-transform: uppercase
+				margin-bottom: 48px
+
+		p
+			font-family: Inter
+			font-style: normal
+			font-weight: 400
+			font-size: 17px
+			line-height: 24px
+			padding-bottom: 48px
+
+			a 
+				color: #00b8ec
+				transition: .6s
+
+			a:hover
+				color: #245aa9	
+
+		img 
+			display: block
+			width: 100% 
+			height: auto
+			margin-bottom: 48px
+
+		ul 
+			margin-bottom: 32px
+
+			li 
+				position: relative
+				font-family: Inter
+				font-style: normal
+				font-weight: 400
+				font-size: 17px
+				line-height: 24px
+				color: #fff
+				padding-left: 40px
+				margin-bottom: 16px
+
+			li:before 
+				content: "—"
+				display: inline-block
+				position: absolute
+				left: 0
+				top: 0
+
+		ol	
+			margin-bottom: 32px
+			counter-reset: faq-ol
+
+			li 
+				position: relative
+				font-family: Inter
+				font-style: normal
+				font-weight: 400
+				font-size: 17px
+				line-height: 24px
+				color: #fff
+				padding-left: 40px
+				margin-bottom: 16px
+			
+			li:before
+				content: counter(faq-ol) ". "
+				counter-increment: faq-ol
+				display: inline-block
+				position: absolute
+				left: 0
+				top: 0
 
 
 
