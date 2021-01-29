@@ -33,10 +33,21 @@ $(function() {
 
 	$('.header-nav-link .action-button').click(function() {
 
-		$(this).parents('.header-nav-link').toggleClass('active-menu');
-		$(this).parents('.header-nav-link').children('.header-inner-nav').slideToggle(300);
+		$('.header-nav-link').removeClass('active-menu');	
+		$('.header-nav-link .header-inner-nav').removeClass('active-menu').slideUp();
+
+		const currentInnerList = $(this).parents('.header-nav-link').children('.header-inner-nav');
+
+		if ( currentInnerList.is(':visible') ) {
+			currentInnerList.parents('.header-nav-link').removeClass('active-menu');
+			currentInnerList.removeClass('active-menu').slideUp();
+		} else {
+			currentInnerList.parents('.header-nav-link').addClass('active-menu');
+			currentInnerList.slideDown(300);
+		}	
 	
 	});
+
 
 	// second mobile-menu(inner-nav)
 
