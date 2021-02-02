@@ -53,7 +53,7 @@ $(function() {
 
 	$('.mobile-menu .mobile-menu-list .mobile-menu-item.mobile-menu-inner-nav').click(function() {
 			
-		let innerNav = $('.mobile-menu .mobile-menu-list .mobile-menu-item.mobile-menu-inner-nav .inner-nav');
+		let innerNav = $(this).children('.inner-nav');
 		let innerNavHeight = innerNav.innerHeight();
 		let mobileMenuList = $('.mobile-menu .mobile-menu-list');
 		let mobileMenuListHeight = mobileMenuList.innerHeight();	
